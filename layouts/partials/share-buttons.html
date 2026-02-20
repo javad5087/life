@@ -1,0 +1,30 @@
+{{/*  Config  */}}
+{{ $switches := (dict
+    "facebook" true
+    "twitter" true
+    "linkedin" true
+    "whatsapp" true
+    "xing" true
+    "mail" true
+) }}
+
+
+{{/*  Code  */}}
+{{ $url := printf "%s" .Permalink | absLangURL }}
+{{ $textBody := print .Title "\n\n" (.Summary | plainify | truncate 200) "\n\n" $url "\n" }}
+{{ $encodedSummary := strings.TrimPrefix "=" (.Summary | plainify | truncate 200) }}
+<div class="social social-bg-pale-brand text-center">
+    <h4 class="divider w-00">{{ i18n "share" }}:</h4>
+    <ul>
+        {{ if $switches.facebook }}<a  class="social-facebook" href="https://www.facebook.com/sharer.php?u={{ $url }}&t={{ .Title }}" target="_blank"><i class="fa fa-facebook"></i></a>{{ end }}
+        
+        {{ if $switches.twitter }}<a class="social-twitter" href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}" target="_blank"><i class="fa fa-twitter"></i></a>{{ end }}
+        
+        {{ if $switches.linkedin }}<a class="social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ .Title }}&summary={{ $encodedSummary }}" target="_blank"><i class="fa fa-linkedin"></i></a>{{ end }}
+        
+        {{ if $switches.whatsapp }}<a class="social-whatsapp" href="whatsapp://send?text={{ $textBody }}" target="_blank"><i class="fa fa-whatsapp"></i></a>{{ end }}
+        
+        {{ if $switches.xing }}<a class="social-telegram" href="https://t.me/share/url?url={{ $url }}&text={{ .Title }}" target="_blank"><i class="fa fa-telegram"></i></a>{{ end }}
+    </ul>
+</div>
+

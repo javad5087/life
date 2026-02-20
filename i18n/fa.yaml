@@ -1,0 +1,53 @@
+---
+- id: latestPosts
+  translation: "مطالب منتخب"
+
+- id: blogHeading
+  translation: "روزمرگی"
+
+- id: pageNotFound
+  translation: "متاسفانه این صفحه موجود نیست."
+
+- id: visitHomePage
+  translation: "رفتن به خانه"
+
+- id: readingTime
+  translation:
+    one: "یک دقیقه خواندن"
+    other: " مدت خواندن {{ .Count }} دقیقه"
+
+- id: backToPosts
+  translation: "رفتن به دسته"
+
+- id: newerPosts
+  translation: "بعـــدی"
+
+- id: olderPosts
+  translation: "قبلـــی"
+
+- id: seeMore
+  translation: "بیشتر"
+
+- id: books
+  translation: "کتاب‌های خوانده شده : "
+
+- id: linux
+  translation: "نوشته‌های روزانه  : "
+
+- id: movies
+  translation: "فیلم‌های دیده شده:"
+
+- id: ipen
+  translation: "قلم من"
+
+- id: tagcloud
+  translation: "بایگانــــــــــی"
+
+- id: pageNotFound
+  translation: "صفحه موجود نیست!"
+
+- id: visitHomePage
+  translation: "صفحه‌ی اول"
+
+- id: share
+  translation: "به اشتراک بگذارید"

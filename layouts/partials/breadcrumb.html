@@ -1,0 +1,15 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="pl-5">
+      اینجایید :
+    </li>
+    {{ range .Ancestors.Reverse }}
+    <li class="breadcrumb-item">
+     <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong> 
+    </li>
+    {{ end }}
+    <li class="breadcrumb-item active text-danger" aria-current="page">
+    <strong>{{ .Title }}</strong>  
+    </li>
+  </ol>
+</nav>

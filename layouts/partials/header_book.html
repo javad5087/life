@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <!-- Styles -->
+  <link href="/css/page.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" {{ if .Site.Params.faviconfile }} href="/{{ .Site.Params.faviconfile }}" {{ else }}
+    href="/img/favicon.ico" {{ end }}>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="navbar-left  input-round">
+        <form action="/search" method="GET">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><button type="submit"><i class="fa fa-search"
+                    aria-hidden="true"></i></button></div>
+            </div>
+            <input class="form-control text-right" type="search" name="q" id="search-query" placeholder="....جستجو">
+          </div>
+        </form>
+      </div>
+      <nav class="nav nav-navbar">
+        <a class="nav-link lead-3 text-dark" href="#" data-toggle="offcanvas" data-target="#offcanvas-menu">☰</a>
+      </nav>
+  </nav>
+  </div>
+  <!-- Navbar -->
+  
+   <header class="header bg-light">
+        <div class="container text-center">
+          <h1 class="display-4 mb-6"><strong>{{ .Title }}</strong></h1>
+          <nav aria-label="breadcrumb">
+            <p class="badge badge-pill badge-secondary lead mt-5">
+              <span>مدت خواندن : {{ .ReadingTime }} دقیقه</span> |
+              <span>ت. کلمات : {{ .WordCount }}</span> | دسته : <a href="/books/">کتاب</a>
+            </p>
+          </nav>
+        </div>
+      </header>
+  <!-- Header  -->

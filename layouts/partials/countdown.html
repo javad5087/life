@@ -1,0 +1,53 @@
+<style>
+  .countdown-item {
+    text-align: center;
+  }
+  .countdown-value {
+    display: block;
+    font-size: 1.5em;
+  }
+</style>
+<div style="display: flex;
+gap: 1rem !important; 
+justify-content: center;" class="countdown" data-date="{{ .date }}">
+  <div style="display: block;
+font-size: 1.5em; 
+  " class="countdown-item">
+    <span class="countdown-value" id="days">0</span>
+    <span style="font-size: 0.7em; " class="countdown-label">روز </span>
+  </div>
+  <div style="display: block;
+font-size: 1.5em; 
+  " class="countdown-item">
+    <span class="countdown-value" id="hours">0</span>
+    <span style="font-size: 0.7em; " class="countdown-label">ساعت </span>
+  </div>
+  <div style="display: block;
+font-size: 1.5em; 
+  " class="countdown-item">
+    <span class="countdown-value" id="minutes">0</span>
+    <span style="font-size: 0.7em; " class="countdown-label">دقیقه </span>
+  </div>
+  <div style="display: block;
+font-size: 1.5em; 
+  " class="countdown-item">
+    <span class="countdown-value" id="seconds">0</span>
+    <span style="font-size: 0.7em; " class="countdown-label">ثانیه</span>
+  </div>
+</div>
+<script>
+  function toPersianDigits(num) {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return num.toString().replace(/\d/g, digit => persianDigits[digit]);
+  }
+  const countdownDate = new Date("{{ .date }}").getTime();
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    document.getElementById("days").textContent = toPersianDigits(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    document.getElementById("hours").textContent = toPersianDigits(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    document.getElementById("minutes").textContent = toPersianDigits(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    document.getElementById("seconds").textContent = toPersianDigits(Math.floor((distance % (1000 * 60)) / 1000));
+    if (distance < 0) clearInterval(timer);
+  }, 1000);
+</script>

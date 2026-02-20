@@ -1,0 +1,66 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div style="border-radius: 5px;background:#fff;" class="container">
+      <div dir="rtl" class="row gap-y ">
+        <div id="b" class="col-md-7 mx-auto text-justify lead text-dark">
+          <h3 class="fw-600 ">{{.Title}}</h3>
+          <br>
+          <h6>چکیده</h6>
+          <p>{{ .Content }}</p><br>
+        </div>
+        <div class="col-md-4 mx-auto text-right">
+          <img class="rounded-md" src={{ .Params.cover }} alt={{.Title}}>
+          <p></p>
+          <h4 class="divider w-00"> مشخــصات فیلم</h4>
+          <p>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>اسم انگلیسی</td>
+                <td>{{ .Params.entitle }}</td>
+              </tr>{{ if and .Params.IMDb (ne .Params.IMDb "") }}
+              <tr>
+              <tr>
+                <td>رتبه :</td>
+                <td>{{ .Params.IMDb }}</td>
+              </tr>{{ end}}
+              <td>زمان</td>
+              <td>{{ .Params.time }}</td>
+              </tr>
+              <tr>
+                <td> سال ساخت</td>
+                <td>{{ .Params.year }}</td>
+              </tr>
+              <tr>
+                <td>ژانر</td>
+                <td>{{ .Params.Genres }}</td>
+              </tr>
+              <tr>
+                <td> کشور</td>
+                <td>{{ .Params.Country }}</td>
+              </tr>
+              <tr>
+                <td> ستارگان </td>
+                <td class="text-left">{{ .Params.stars }}</td>
+              </tr>
+              <tr>
+                <td> کارگردان </td>
+                <td class="text-left">{{ .Params.Director }}</td>
+              </tr>
+              <tr>
+                <td> نویسنده </td>
+                <td class="text-left">{{ .Params.Writer }}</td>
+              </tr>
+            </tbody>
+          </table>
+          </p>
+          {{ partial "related.html" . }}
+          {{ partial "share-buttons.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

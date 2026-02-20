@@ -1,0 +1,54 @@
+baseURL = "https://javadsajjadi.ir"
+languageCode = "fa"
+title = "جوادسجادی"
+defaultContentLanguage = "fa"
+enableRobotsTXT = true
+summaryLength = "30"
+
+
+ paginate = 3
+
+[params]
+  description = "فارغ‌التحصیل حقوق، عضو کانون نویسندگان ایران"
+  author = "سیدجواد سجادی"
+  faviconfile            = "img/leaf.ico"
+[permalinks]
+crime  = "book/:filename"
+
+[menu]
+  [[menu.main]]
+    name = "خانه"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "کتاب‌ها"
+     identifier = "books"
+    url = "/books/"
+    weight = 2
+  [[menu.main]]
+    name = "فیلم‌ها"
+    identifier = "movies"
+    url = "/movies/"
+    weight = 3
+  [[menu.main]]
+    name = "نوشته"
+    identifier = "linux"
+    url = "/linux/"
+    weight = 4
+   [[menu.main]]
+    name = "کتابفروشی"
+    identifier = "i-pen"
+    url = "https://i-pen.ir"
+    weight = 5
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+  [related]
+  includeNewer = true
+  threshold = 85
+  toLower = false
+  
+  [outputs]
+    home = ["HTML", "RSS", "JSON"]

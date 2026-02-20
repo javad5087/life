@@ -1,0 +1,28 @@
+{{ define "main" }}
+<nav class="bb-1 bg-pale-success" aria-label="breadcrumb">
+        <div dir="rtl" class="container ">
+          <ol class="breadcrumb px-0">
+            <span > {{ partial "breadcrumb.html" . }}</span>
+          </ol>
+        </div>
+      </nav>
+<section class="section pt-3">
+  <div class="container">
+     
+    <div style="border-radius: 5px;background:#fff;" class="container">
+      <div dir="rtl" class="row gap-y ">
+        <div id="b" class="col-md-7 mx-auto text-justify lead text-dark">
+          
+          <h6>چکیده</h6>
+          <p>{{ .Content }}</p><br>
+        </div>
+        <div class="col-md-4 text-right">
+            {{ partial "related.html" . }}
+            {{ partial "share-buttons.html" . }}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

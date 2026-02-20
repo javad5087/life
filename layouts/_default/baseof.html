@@ -1,0 +1,26 @@
+{{if eq .Type "books"}}
+{{if .IsPage}}
+{{partial "header_book.html" .}}
+{{else}}
+{{partial "header.html" .}}
+{{end}}
+{{else if eq .Type "movies"}}
+{{if .IsPage}}
+{{partial "header_film.html" .}}
+{{else}}
+{{partial "header.html" .}}
+{{end}}
+{{else if eq .Type "linux"}}
+{{if .IsPage}}
+{{partial "header_linux.html" .}}
+{{else}}
+{{partial "header.html" .}}
+{{end}}
+{{else}}
+{{partial "header.html" .}}
+{{end}}
+{{ block "main" . }}
+{{ end }}
+{{ partial "footer" . }}
+
+

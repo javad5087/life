@@ -1,0 +1,114 @@
+{
+  "file": "content/movies/bicycle-thieves.md",
+  "name": "movies",
+  "fileType": "md",
+  "fmType": "yaml",
+  "template": [
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "entitle",
+      "label": "Entitle",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "date",
+      "label": "Date",
+      "type": "Date",
+      "value": "",
+      "defaultValue": "",
+      "alwaysUseCurrentDate": false
+    },
+    {
+      "name": "draft",
+      "label": "Draft",
+      "type": "boolean",
+      "value": false,
+      "defaultValue": false
+    },
+    {
+      "name": "categories",
+      "label": "Categories",
+      "type": "Array",
+      "value": [],
+      "defaultValue": ""
+    },
+    {
+      "name": "cover",
+      "label": "Cover",
+      "type": "media",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "summary",
+      "label": "Summary",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "IMDb",
+      "label": "IMDb",
+      "type": "number",
+      "value": 0,
+      "defaultValue": 0
+    },
+    {
+      "name": "time",
+      "label": "Time",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "year",
+      "label": "Year",
+      "type": "number",
+      "value": 0,
+      "defaultValue": 0
+    },
+    {
+      "name": "Genres",
+      "label": "Genres",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "Country",
+      "label": "Country",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "Director",
+      "label": "Director",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "Writer",
+      "label": "Writer",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "stars",
+      "label": "Stars",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    }
+  ]
+}

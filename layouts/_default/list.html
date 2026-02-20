@@ -1,0 +1,43 @@
+{{ define "main" }}
+<!-- Main Content -->
+<main class="main-content">
+  <section class="section bg-gray p-0">
+    <div class="container">
+      {{ $paginator := .Paginate (where .Site.RegularPages "Section" "books") }}
+      <div class="row">
+        {{ range $paginator.Pages }}
+        <div class="col-md-10 col-xl-9 mx-auto">
+          <div class="card hover-shadow-7 my-4">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="p-7 text-right">
+                  <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                  {{ if .Params.summary }}
+                  <p>{{ .Params.summary }}</p>
+                  {{ else }}
+                  <p class="summary">{{ .Summary }}</p>
+                  {{ end }}
+                  <a class="small ls-1" href="{{ .Permalink }}">ادامه مطلب <span class="pl-1">&xrarr;</span></a>
+                </div>
+              </div>
+              {{ if .Params.cover }}
+              <div class="col-md-4">
+                <a href="{{ .Permalink }}"><img class="fit-cover position-absolute h-100" src="{{ .Params.cover }}"
+                    alt="{{ .Title }}"></a>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      <!-- Pagination -->
+      <nav class="my-8">
+        <ul class="pagination justify-content-center">
+          {{ template "_internal/pagination.html" . }}
+        </ul>
+      </nav>
+    </div>
+  </section>
+</main>
+{{ end }}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ .Summary }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <!-- Styles -->
+  <link href="/css/page.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Favicons -->
+  <link rel="shortcut icon" {{ if .Site.Params.faviconfile }} href="/{{ .Site.Params.faviconfile }}" {{ else }}
+    href="/img/favicon.ico" {{ end }}>
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:image" content="{{ .Params.image | absURL }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Description }}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <div class="navbar-left  input-round">
+        <form action="/search" method="GET">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><button type="submit"><i class="fa fa-search"
+                    aria-hidden="true"></i></button></div>
+            </div>
+            <input class="form-control text-right" type="search" name="q" id="search-query" placeholder="....جستجو">
+          </div>
+        </form>
+      </div>
+      <nav class="nav nav-navbar">
+        <a class="nav-link lead-3" href="#" data-toggle="offcanvas" data-target="#offcanvas-menu">☰</a>
+      </nav>
+  </nav>
+  </div>
+  <!-- Navbar -->
+  <!-- Header style="background-image: url(assets/img/bg/02.jpg);"  data-overlay="8" -->
+  <header class="header bg-gray pb-4 text-center text-dark">
+    <div class="container">
+      <div class="row">
+        <div class=" col-md-6 col-lg-4 mx-auto">
+          <div class="text-center mt-3 mb-5 font-weight-700">
+            <p class="mb-6">
+              <span class="rounded-circle">
+                <img class="avatar avatar-xl" src="/img/bg/q.jpg" alt="avatar">
+              </span>
+            </p>
+            <h6 class="font-weight-700">{{ .Site.Params.author }} </h6>
+            {{ .Site.Params.description }}
+          </div>
+        </div>
+      </div>
+  </header>
