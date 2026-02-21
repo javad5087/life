@@ -21,22 +21,22 @@ crime  = "book/:filename"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "کتاب‌ها"
+    name = "کتاب‌"
      identifier = "books"
     url = "/books/"
     weight = 2
   [[menu.main]]
-    name = "فیلم‌ها"
+    name = "فیلم‌"
     identifier = "movies"
     url = "/movies/"
     weight = 3
   [[menu.main]]
-    name = "نوشته"
-    identifier = "linux"
-    url = "/linux/"
-    weight = 4
+    name = "قلم‌من"
+    identifier = "i-pen"
+    url = "https://i-pen.ir"
+    weight = "4"
    [[menu.main]]
-    name = "کتابفروشی"
+    name = "قلم‌من"
     identifier = "i-pen"
     url = "https://i-pen.ir"
     weight = 5
