@@ -1,6 +1,6 @@
 ---
 title: آموزش جامع حقوق تجارت
-date: ""
+date: 2026-02-21T22:18:12.483Z
 draft: false
 categories: "book"
 tags:
