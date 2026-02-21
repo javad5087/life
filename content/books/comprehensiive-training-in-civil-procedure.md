@@ -1,6 +1,6 @@
 ---
 title: آموزش جامع آیین دادرسی مدنی
-date: ""
+date: 2026-02-21T22:08:02.090Z
 draft: false
 categories: "book"
 tags:
