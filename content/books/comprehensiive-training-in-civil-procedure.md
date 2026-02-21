@@ -5,7 +5,7 @@ draft: false
 categories: "book"
 tags:
   - " آیین دادرسی مدنی"
-cover: "/images/Comprehensive training in civil procedure.jpg"
+cover: "/images/book/Comprehensive training in civil procedure.jpg"
 summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
 
   صلاحیت محلی در دعوای مطالبه وجه چک
