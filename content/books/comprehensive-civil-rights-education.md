@@ -1,6 +1,6 @@
 ---
 title: آموزش جامع حقوق مدنی
-date: ""
+date: 2026-02-21T21:48:40.816Z
 draft: false
 categories: "book"
 tags:
