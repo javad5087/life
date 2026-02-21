@@ -31,10 +31,10 @@ crime  = "book/:filename"
     url = "/movies/"
     weight = 3
   [[menu.main]]
-    name = "نوشته"
-    identifier = "linux"
-    url = "/linux/"
-    weight = 4
+    name = "کتابفروشی"
+    identifier = "i-pen"
+    url = "https://i-pen.ir"
+    weight = 5
    [[menu.main]]
     name = "کتابفروشی"
     identifier = "i-pen"
