@@ -1,7 +1,7 @@
 ---
 title: "(سریال)آخرین سامورایی ایستاده "
 entitle: "last samurai standing"
-date: ""
+date: 2026-02-20T22:03:00.000Z
 draft: false
 categories:
   - movies
