@@ -13,7 +13,7 @@ summary: "در دورهٔ میجی (اواخر قرن نوزدهم)، ۲۹۲ م�
 IMDb: "7.6"
 time: "50"
 year: "2025"
-Genres: "درام،  تارخی"
+Genres: "درام،  تاریخی"
 Country: "ژاپن"
 Director: "Michihito Fujii, Kento Yamaguchi, Toru Yamamoto"
 Writer: "Kento Yamaguchi, Michihito Fujii"
