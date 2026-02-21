@@ -21,12 +21,12 @@ crime  = "book/:filename"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "کتاب‌ها"
+    name = "کتاب‌"
      identifier = "books"
     url = "/books/"
     weight = 2
   [[menu.main]]
-    name = "فیلم‌ها"
+    name = "فیلم‌"
     identifier = "movies"
     url = "/movies/"
     weight = 3
