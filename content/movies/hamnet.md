@@ -1,7 +1,7 @@
 ---
 title: همنت
 entitle: "Hamnet"
-date: ""
+date: 2026-02-22T09:30:41.409Z
 draft: false
 categories:
   - movies
