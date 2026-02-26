@@ -1,4 +1,8 @@
 [[sites]]
+  name = "پایگاه خبری اختبار"
+  url = "https://www.ekhtebar.ir/feed/"
+
+[[sites]]
   name = "خبرگزاری میزان"
   url = "https://www.mizanonline.ir/fa/rss/17"
 
@@ -13,10 +17,6 @@
 [[sites]]
   name = "وکلاپرس"
   url = "https://vokalapress.ir/feed/"
-
-[[sites]]
-  name = "پایگاه خبری اختبار"
-  url = "https://www.ekhtebar.ir/feed/"
 
 [[sites]]
   name = "خبرگزاری مهر"
