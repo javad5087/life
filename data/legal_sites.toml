@@ -22,5 +22,18 @@
   name = "خبرگزاری مهر"
   url = "https://www.mehrnews.com/rss/tp/66"
 
+[[sites]]
+  name = "اسکودا"
+  url = "https://scoda.org/feed/"
+
+[[sites]]
+  name = "مرکز وکلای قوه قضاییه"
+  url = "https://www.23055.ir/feed/"
+
+
+
+
+ 
+
 
 
