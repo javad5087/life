@@ -32,24 +32,19 @@ crime  = "book/:filename"
     weight = 3
   [[menu.main]]
     name = "قلم‌من"
-    identifier = "i-pen"
+    identifier = "pen"
     url = "https://i-pen.ir"
-    weight = "4"
-   [[menu.main]]
-    name = "قلم‌من"
-    identifier = "i-pen"
-    url = "https://i-pen.ir"
-    weight = 5
+    weight = 4
    [[menu.main]]
     name = "موزیک"
     identifier = "i-pen"
     url = "/music/"
-    weight = 6
+    weight = 5
     [[menu.main]]
     name = "اخبار"
     identifier = "i-pen"
     url = "/rss"
-    weight = 7
+    weight = 6
 
 
  [taxonomies]
