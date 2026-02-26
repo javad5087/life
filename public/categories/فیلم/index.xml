@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>فیلم on جوادسجادی</title>
+    <link>http://localhost:1313/categories/%D9%81%DB%8C%D9%84%D9%85/</link>
+    <description>Recent content in فیلم on جوادسجادی</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <lastBuildDate>Thu, 19 Feb 2026 20:05:45 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%D9%81%DB%8C%D9%84%D9%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>١٢ مرد خشمگین</title>
+      <link>http://localhost:1313/movies/12-angry-men/</link>
+      <pubDate>Thu, 19 Feb 2026 20:05:45 +0000</pubDate>
+      <guid>http://localhost:1313/movies/12-angry-men/</guid>
+      <description>هیئت منصفه در یک دادگاه قتل در شهر نیویورک، از احتیاط شکاکانه یکی از اعضای هیئت منصفه که آنها را مجبور می‌کند قبل از صدور حکم عجولانه، شواهد را با دقت بیشتری دوباره بررسی کنند، نا امید شده‌اند.</description>
+    </item>
+    <item>
+      <title>کفرناحوم</title>
+      <link>http://localhost:1313/movies/capernaum/</link>
+      <pubDate>Thu, 19 Feb 2026 19:32:40 +0000</pubDate>
+      <guid>http://localhost:1313/movies/capernaum/</guid>
+      <description>پسری ۱۲ ساله در حالی که به جرم ارتکاب جرم خشونت‌آمیز به پنج سال زندان محکوم شده بود، از والدینش به دلیل سهل‌انگاری در مراقبت از او شکایت کرد.</description>
+    </item>
+    <item>
+      <title>گسیختگی</title>
+      <link>http://localhost:1313/movies/detachment/</link>
+      <pubDate>Thu, 19 Feb 2026 10:45:08 +0000</pubDate>
+      <guid>http://localhost:1313/movies/detachment/</guid>
+      <description>یک معلم جانشین که از کلاس به کلاس می‌رود، در آخرین ماموریت تدریس خود با دانش‌آموزان و معلمان ارتباط برقرار می‌کند.</description>
+    </item>
+  </channel>
+</rss>

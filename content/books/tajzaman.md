@@ -2,8 +2,8 @@
 title: "مجرم کیست و جرم شناسی چیست؟"
 date: 2026-02-09T23:22:13+03:30
 draft: false
-categories: "book"
-tags: ["تاج زمان دانش", "جرم", "جرم‌شانسی"]
+categories: ["book"]
+tags: 
 cover: "/images/book/taj-zaman-criminology.jpg"
 summary: ""
 readingTime: "٨ ساعت"

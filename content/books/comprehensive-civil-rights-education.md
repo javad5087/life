@@ -2,9 +2,8 @@
 title: آموزش جامع حقوق مدنی
 date: 2026-02-21T21:48:40.816Z
 draft: false
-categories: "book"
-tags:
-  - مدنی
+categories: ["book"]
+tags: 
 cover: "/images/book/madani-tawakoli.jpg"
 summary: "کتاب حقوق مدنی دو جلدی,  اثر دکتر محمدمهدی توکلی، جامع‌ترین منبع برای
   تسلط بر پیچیدگی‌های حقوق مدنی است. این مجموعه با توضیحات  ساده و روان ، تمامی

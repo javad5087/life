@@ -2,7 +2,7 @@
 title: جرم شانسی نظری
 date: 2026-02-19T10:30:00.000Z
 draft: false
-categories: "جرم شناسی"
+categories: ["book"]
 tags:
   - جرم شناسی
 cover: "/images/book/kiynia-gelsson.webp"

@@ -17,35 +17,59 @@
     href="/img/favicon.ico" {{ end }}>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <div class="navbar-left  input-round">
-        <form action="/search" method="GET">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text"><button type="submit"><i class="fa fa-search"
-                    aria-hidden="true"></i></button></div>
-            </div>
-            <input class="form-control text-right" type="search" name="q" id="search-query" placeholder="....جستجو">
-          </div>
-        </form>
-      </div>
-      <nav class="nav nav-navbar">
-        <a class="nav-link lead-3 text-dark" href="#" data-toggle="offcanvas" data-target="#offcanvas-menu">☰</a>
+ <nav dir="rtl" id="spotify-player" class="navbar navbar-expand-lg navbar-dark shadow-2 navbar-stick-dark pt-0 stick spotify-player text-center" data-navbar="sticky">
+      
+
+   <nav class="nav nav-navbar">
+        <span class="padding-left: 50%;text-light">قطعه‌ای را انتخاب کنید </span>
       </nav>
+
+<script>
+  function toPersianDigits(num) {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return num.toString().replace(/\d/g, digit => persianDigits[digit]);
+  }
+function selectTrack(title, artist, url, element) {
+  document.querySelectorAll('.spotify-track').forEach(t => t.classList.remove('active'));
+  element.classList.add('active');
+
+  const player = document.getElementById("spotify-player");
+  player.innerHTML = `
+    <div class="player-info gap-x-4">
+      <strong>${title}</strong>
+      <span>${artist}</span>
+    </div>
+    <audio controls autoplay>
+      <source src="${url}" type="audio/mpeg">
+    </audio>
+  `;
+}
+</script>
+
+
+
   </nav>
-  </div>
-  <!-- Navbar -->
-  
-   <header class="header bg-light">
-        <div class="container text-center">
-          <h1 class="display-4 mb-6"><strong>{{ .Title }}</strong></h1>
-          <nav aria-label="breadcrumb">
-            <p class="badge badge-pill badge-secondary lead mt-5">
-              <span>مدت خواندن : {{ .ReadingTime }} دقیقه</span> |
-              <span>ت. کلمات : {{ .WordCount }}</span> | دسته : <a href="/linux/">نوشته</a>
+
+<header class="header bg-pale-secondary pb-4 text-center text-dark">
+    <div class="container">
+
+      <div class="row">
+        <div class=" col-md-6 col-lg-4 mx-auto">
+          <div class="text-center mt-4 font-weight-700">
+            <p class="mb-6">
+              <span class="rounded-circle">
+                <img class="avatar avatar-xl" src="/img/bg/q.jpg" alt="avatar">
+              </span>
             </p>
-          </nav>
+            <h6 class="font-weight-700">{{ .Site.Params.author }} </h6>
+            {{ .Site.Params.description }}
+          </div>
         </div>
-      </header>
-  <!-- Header  -->
+      </div>
+      <h5 dir="rtl" class="divider text-right text-dark"> دسته‌ها: {{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        | تعداد نوشته‌ها {{ len .Site.RegularPages }}
+      </h5>
+    </div>
+  </header><!-- /.header -->

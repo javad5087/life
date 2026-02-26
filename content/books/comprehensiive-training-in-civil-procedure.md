@@ -2,9 +2,8 @@
 title: آموزش جامع آیین دادرسی مدنی
 date: 2026-02-21T22:08:02.090Z
 draft: false
-categories: "book"
-tags:
-  - " آیین دادرسی مدنی"
+categories: ["book"]
+tags: 
 cover: "/images/book/Comprehensive training in civil procedure.jpg"
 summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
 

@@ -1,0 +1,15 @@
+<div class="spotify-playlist bg-pale-warning">
+  <div class="spotify-tracklist ">
+    {{ range site.Data.playlist.songs }}
+      <div class="spotify-track"
+           onclick="selectTrack('{{ .title }}','{{ .artist }}','{{ .url }}', this)">
+        <div class="track-info text-right ">
+          <strong>{{ .title }}</strong><br>
+          <span>{{ .artist }}</span>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+  
+

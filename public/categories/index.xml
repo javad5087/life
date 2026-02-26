@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on جوادسجادی</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on جوادسجادی</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <lastBuildDate>Sun, 22 Feb 2026 09:30:41 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Movies</title>
+      <link>http://localhost:1313/categories/movies/</link>
+      <pubDate>Sun, 22 Feb 2026 09:30:41 +0000</pubDate>
+      <guid>http://localhost:1313/categories/movies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book</title>
+      <link>http://localhost:1313/categories/book/</link>
+      <pubDate>Sat, 21 Feb 2026 22:18:12 +0000</pubDate>
+      <guid>http://localhost:1313/categories/book/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>فیلم</title>
+      <link>http://localhost:1313/categories/%D9%81%DB%8C%D9%84%D9%85/</link>
+      <pubDate>Thu, 19 Feb 2026 20:05:45 +0000</pubDate>
+      <guid>http://localhost:1313/categories/%D9%81%DB%8C%D9%84%D9%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Thu, 19 Feb 2026 12:31:22 +0000</pubDate>
+      <guid>http://localhost:1313/categories/linux/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

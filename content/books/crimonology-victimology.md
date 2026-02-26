@@ -2,8 +2,8 @@
 title: "درآمدی بر جرم‌شانسی و بزه دیده شناسی"
 date: 2026-02-10T18:54:49+03:30
 draft: false
-categories: "books"
-tags: ["بزه دیده", "جرم شانسی"]
+categories: ["book"]
+tags: 
 cover: "/images/book/salahijavid-victimonolgy.jpg"
 summary: ""
 readingTime: "10"

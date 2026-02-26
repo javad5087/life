@@ -2,8 +2,8 @@
 title: "بزه‌دیده و بزه‌دیده‌شناسی"
 date: 2026-02-10T19:46:38+03:30
 draft: false
-categories: "books"
-tags: ["بزه دیده شناسی", "بزه", "جرمشانسی"]
+categories: ["book"]
+tags:  
 cover: "/images/book/victim.jpg"
 summary: ""
 readingTime: "12"

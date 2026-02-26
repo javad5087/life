@@ -1,0 +1,98 @@
+{{ define "main" }}
+<div class="news-container" dir="rtl">
+    <div id="news-wrapper" class="cards-wrapper">
+        {{ $allPosts := slice }}
+        {{ range .Site.Data.legal_sites.sites }}
+            {{ $sourceName := .name }}
+            {{ with resources.GetRemote .url }}
+                {{ with . | transform.Unmarshal }}
+                    {{ range first 10 .channel.item }}
+                        {{/* ذخیره تاریخ به فرمت ایزو برای تبدیل راحت‌تر */}}
+                        {{ $allPosts = $allPosts | append (dict "title" .title "link" .link "date" .pubDate "source" $sourceName "desc" (.description | plainify | truncate 120)) }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+        {{ range (sort $allPosts "date" "desc") }}
+        <div class="news-card" style="display: none;">
+            <div class="card-badge">{{ .source }}</div>
+            <div class="card-content">
+                <h3><a href="{{ .link }}" target="_blank">{{ .title }}</a></h3>
+                <p>{{ .desc }}</p>
+                <span class="card-date" data-utc="{{ .date }}">در حال بارگذاری تاریخ...</span>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="pagination-controls">
+        <button id="prev-btn" onclick="changePage(-1)">قبلی</button>
+        <span id="page-num">صفحه ۱</span>
+        <button id="next-btn" onclick="changePage(1)">بعدی</button>
+    </div>
+</div>
+
+{{/* کتابخانه کوچک برای تبدیل تاریخ به شمسی */}}
+<script src="https://unpkg.com/behdad-time-ago/dist/behdad-time-ago.min.js"></script>
+
+<script>
+    const cardsPerPage = 6;
+    let currentPage = 1;
+    const cards = Array.from(document.querySelectorAll('.news-card'));
+
+    // تابع تبدیل تاریخ میلادی به شمسی زیبا
+    function convertDates() {
+        const dateElements = document.querySelectorAll('.card-date');
+        dateElements.forEach(el => {
+            const utcDate = el.getAttribute('data-utc');
+            const date = new Date(utcDate);
+            // استفاده از Intl برای نمایش تاریخ شمسی استاندارد
+            const faDate = new Intl.DateTimeFormat('fa-IR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }).format(date);
+            el.innerText = faDate;
+        });
+    }
+
+    function showPage(page) {
+        const start = (page - 1) * cardsPerPage;
+        const end = start + cardsPerPage;
+
+        cards.forEach((card, index) => {
+            card.style.display = (index >= start && index < end) ? 'flex' : 'none';
+        });
+
+        document.getElementById('page-num').innerText = `صفحه ${page} از ${Math.ceil(cards.length / cardsPerPage)}`;
+        document.getElementById('prev-btn').disabled = (page === 1);
+        document.getElementById('next-btn').disabled = (end >= cards.length);
+    }
+
+    function changePage(step) {
+        currentPage += step;
+        showPage(currentPage);
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // اجرا
+    convertDates();
+    showPage(1);
+</script>
+
+<style>
+    .news-container { font-family: 'Tahoma', sans-serif; max-width: 1200px; margin: auto; }
+    .cards-wrapper { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+    .news-card { background: #fff; border: 1px solid #ddd; border-radius: 10px; flex-direction: column; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .news-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+    .card-badge { background: #1a5276; color: white; padding: 5px 15px; font-size: 0.75rem; border-radius: 0 10px 0 10px; width: fit-content; }
+    .card-content { padding: 15px; flex-grow: 1; }
+    .card-content h3 a { color: #212f3c; text-decoration: none; font-size: 1rem; }
+    .card-date { color: #888; font-size: 0.8rem; margin-top: 10px; display: block; border-top: 1px solid #eee; padding-top: 5px; }
+    .pagination-controls { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 30px 0; }
+    .pagination-controls button { padding: 8px 25px; cursor: pointer; background: #1a5276; color: white; border: none; border-radius: 5px; }
+    .pagination-controls button:disabled { background: #ccc; }
+</style>
+
+{{ end }}

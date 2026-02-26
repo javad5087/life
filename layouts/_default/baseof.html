@@ -10,17 +10,26 @@
 {{else}}
 {{partial "header.html" .}}
 {{end}}
-{{else if eq .Type "linux"}}
+{{else if eq .Type "music"}}
 {{if .IsPage}}
 {{partial "header_linux.html" .}}
 {{else}}
-{{partial "header.html" .}}
+{{partial "header_linux.html" .}}
 {{end}}
 {{else}}
 {{partial "header.html" .}}
 {{end}}
 {{ block "main" . }}
 {{ end }}
-{{ partial "footer" . }}
+
+{{ if eq .Section "music" }}
+  {{ partial "footer1.html" . }}
+{{ else }}
+  {{ partial "footer.html" . }}
+{{ end }}
+
+
+
+
 
 

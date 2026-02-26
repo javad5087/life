@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>سیستم عامل on جوادسجادی</title>
+    <link>http://localhost:1313/tags/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%D8%B9%D8%A7%D9%85%D9%84/</link>
+    <description>Recent content in سیستم عامل on جوادسجادی</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fa</language>
+    <lastBuildDate>Thu, 19 Feb 2026 12:31:22 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%D8%B9%D8%A7%D9%85%D9%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>گنو/لینوکس زورین</title>
+      <link>http://localhost:1313/linux/linux/</link>
+      <pubDate>Thu, 19 Feb 2026 12:31:22 +0000</pubDate>
+      <guid>http://localhost:1313/linux/linux/</guid>
+      <description>کار کردن با سیستم عامل گنو/لینوکس زورین و، نصب آن روی لبتاپم.در این نوشته به معرفی آن خواهم پرداخت</description>
+    </item>
+  </channel>
+</rss>
