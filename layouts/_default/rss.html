@@ -19,25 +19,26 @@
             {{ end }}
         {{ end }}
 
-        {{ range (sort $allPosts "date" "desc") }}
+       
         
-      <div style="margin: auto; padding-right: 10%; padding-left: 5%">
-        <div dir="rtl" class="row gap-y">
-         
-                            <div class="col-md-6">
-                              
-                                <p class="mb-0 small-3 text-light"></p>
-                                <h6 class="mb-0 font-weight-600"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h6> 
-                                <p class="text-dark ">{{ .desc }}</p>
-                                <div class="post-meta" style="color: #999;">
-                    <span>{{ .source }}</span> | 
-                    <span data-utc="{{ .date }}">در حال بارگذاری تاریخ...</span>
-                                </div>
-                              
-                            </div>
+              <div style="margin: auto; padding-right: 10%; padding-left: 5%">
+                        <div dir="rtl" class="row gap-y">
+                         {{ range (sort $allPosts "date" "desc") }}
+                                            <div class="col-md-6 text-right">
+                                              
+                                                <p class="mb-0 small-3 text-light"></p>
+                                                <h6 class="mb-0 font-weight-600"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h6> 
+                                                <p class="text-light">{{ .desc }}</p>
+                                                <div class="post-meta" style="color: #999;">
+                                                  <span>{{ .source }}</span> | 
+                                                  <span data-utc="{{ .date }}">در حال بارگذاری تاریخ...</span>
+                                                </div>
+                                              
+                                            </div>{{ end }}
 
-      </div></div>
-         {{ end }}
+                        </div> 
+                </div>
+        
        
 
         <nav>
@@ -47,12 +48,7 @@
         <button id="next-btn" onclick="changePage(1)">بعدی</button>
           </ul>
         </nav>
-     
-  
- </div>
-    </section>
-</main>
-{{/* کتابخانه کوچک برای تبدیل تاریخ به شمسی */}}
+     {{/* کتابخانه کوچک برای تبدیل تاریخ به شمسی */}}
 <script src="https://unpkg.com/behdad-time-ago/dist/behdad-time-ago.min.js"></script>
 
 <script>
@@ -99,6 +95,11 @@
     convertDates();
     showPage(1);
 </script>
+  
+ </div>
+    </section>
+</main>
+
 
 
 
