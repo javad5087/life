@@ -62,49 +62,59 @@
   </section>
 </main>
 
+
 <script>
+  const sites = {{ .Site.Data.legal_sites.sites | jsonify }};
+  let allPosts = [];
   const cardsPerPage = 14;
   let currentPage = 1;
-  const cards = Array.from(document.querySelectorAll('.news'));
 
-  // تبدیل تاریخ میلادی به شمسی
-  function convertDates() {
-    document.querySelectorAll('.card-date').forEach(el => {
-      const date = new Date(el.getAttribute('data-utc'));
-      if (isNaN(date)) {
-        el.innerText = '—';
-        return;
+  async function fetchRSS() {
+    for (const site of sites) {
+      try {
+        const response = await fetch(site.url);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        
+        const items = xml.querySelectorAll('item');
+        items.forEach((item, i) => {
+          if (i < 15) {
+            allPosts.push({
+              title: item.querySelector('title')?.textContent || '—',
+              link: item.querySelector('link')?.textContent || '#',
+              date: item.querySelector('pubDate')?.textContent || '',
+              source: site.name,
+              desc: (item.querySelector('description')?.textContent || '').substring(0, 120)
+            });
+          }
+        });
+      } catch (e) {
+        console.error(`خطا در دریافت ${site.name}:`, e);
       }
-      el.innerText = new Intl.DateTimeFormat('fa-IR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }).format(date);
-    });
+    }
+
+    allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderPosts();
   }
 
-  function showPage(page) {
-    const start = (page - 1) * cardsPerPage;
-    const end   = start + cardsPerPage;
-
-    cards.forEach((card, i) => {
-      card.style.display = (i >= start && i < end) ? 'block' : 'none';
-    });
-
-    const total = Math.ceil(cards.length / cardsPerPage);
-    document.getElementById('page-num').innerText = `صفحه ${page} از ${total}`;
-    document.getElementById('prev-btn').disabled = (page === 1);
-    document.getElementById('next-btn').disabled = (end >= cards.length);
+  function convertToJalali(dateStr) {
+    const date = new Date(dateStr);
+    if (isNaN(date)) return '—';
+    return new Intl.DateTimeFormat('fa-IR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }).format(date);
   }
 
-  function changePage(step) {
-    currentPage += step;
-    showPage(currentPage);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  function renderPosts() {
+    const container = document.getElementById('posts-container');
+    container.innerHTML = '';
 
-  convertDates();
-  showPage(1);
+    const start = (currentPage - 1) * cardsPerPage;
+    const end = start + cardsPerPage
 </script>
 
 {{ end }}
+
