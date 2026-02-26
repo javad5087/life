@@ -1,12 +1,22 @@
 [[sites]]
-  name = "کانون وکلای دادگستری مرکز"
-  url = "https://icbar.ir/RSS/News"
+  name = "خبرگزاری میزان"
+  url = "https://www.mizanonline.ir/fa/rss/17"
+
+[[sites]]
+  name = "خبرگزاری ایسنا"
+  url = "https://www.isna.ir/rss/tp/164"
+
+[[sites]]
+  name = "وکلاپرس"
+  url = "https://vokalapress.ir/feed/"
 
 [[sites]]
   name = "پایگاه خبری اختبار"
   url = "https://www.ekhtebar.ir/feed/"
 
 [[sites]]
-  name = "خبرگزاری میزان"
-  url = "https://www.mizanonline.ir/fa/rss/all"
+  name = "خبرگزاری مهر"
+  url = "https://www.mehrnews.com/rss/tp/66"
+
+
 

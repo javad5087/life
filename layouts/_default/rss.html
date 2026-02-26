@@ -2,105 +2,110 @@
 
 <!-- Main Content -->
 <main class="main-content">
-
   <section class="section">
-  
-    <div  class="container">
-          {{ $allPosts := slice }}
-        {{ range .Site.Data.legal_sites.sites }}
-            {{ $sourceName := .name }}
-            {{ with resources.GetRemote .url }}
-                {{ with . | transform.Unmarshal }}
-                    {{ range first 10 .channel.item }}
-                        {{/* ذخیره تاریخ به فرمت ایزو برای تبدیل راحت‌تر */}}
-                        {{ $allPosts = $allPosts | append (dict "title" .title "link" .link "date" .pubDate "source" $sourceName "desc" (.description | plainify | truncate 120)) }}
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-        {{ end }}
+    <div dir="rtl" class="container">
 
-       
-        
-              <div style="margin: auto; padding-right: 10%; padding-left: 5%">
-                        <div dir="rtl" class="row gap-y">
-                         {{ range (sort $allPosts "date" "desc") }}
-                                            <div class="col-md-6 text-right">
-                                              
-                                                <p class="mb-0 small-3 text-light"></p>
-                                                <h6 class="mb-0 font-weight-600"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h6> 
-                                                <p class="text-light">{{ .desc }}</p>
-                                                <div class="post-meta" style="color: #999;">
-                                                  <span>{{ .source }}</span> | 
-                                                  <span data-utc="{{ .date }}">در حال بارگذاری تاریخ...</span>
-                                                </div>
-                                              
-                                            </div>{{ end }}
+      {{ $allPosts := slice }}
+      {{ range .Site.Data.legal_sites.sites }}
+          {{ $sourceName := .name }}
+          {{ with resources.GetRemote .url }}
+              {{ with . | transform.Unmarshal }}
+                  {{ range first 15 .channel.item }}
+                      {{ $allPosts = $allPosts | append (dict 
+                          "title" .title 
+                          "link" .link 
+                          "date" .pubDate 
+                          "source" $sourceName 
+                          "desc" (.description | plainify | truncate 120)) }}
+                  {{ end }}
+              {{ end }}
+          {{ end }}
+      {{ end }}
 
-                        </div> 
-                </div>
-        
-       
+      <div style="margin: auto; padding-right: 10%; padding-left: 5%">
+        <div dir="rtl" class="row gap-y">
 
-        <nav>
-          <ul class="pagination justify-content-center mt-5">
-            <button id="prev-btn" onclick="changePage(-1)">قبلی</button>
-        <span id="page-num">صفحه ۱</span>
-        <button id="next-btn" onclick="changePage(1)">بعدی</button>
-          </ul>
-        </nav>
-     {{/* کتابخانه کوچک برای تبدیل تاریخ به شمسی */}}
-<script src="https://unpkg.com/behdad-time-ago/dist/behdad-time-ago.min.js"></script>
+          {{/* مرتب‌سازی از جدید به قدیم */}}
+          {{ range (sort $allPosts "date" "desc") }}
+          <div class="col-md-6 text-right news">
 
-<script>
-    const cardsPerPage = 6;
-    let currentPage = 1;
-    const cards = Array.from(document.querySelectorAll('.news-card'));
+            {{/* ۱. تیتر */}}
+            <h6 class="mb-1 font-weight-600">
+              <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+            </h6>
 
-    // تابع تبدیل تاریخ میلادی به شمسی زیبا
-    function convertDates() {
-        const dateElements = document.querySelectorAll('.card-date');
-        dateElements.forEach(el => {
-            const utcDate = el.getAttribute('data-utc');
-            const date = new Date(utcDate);
-            // استفاده از Intl برای نمایش تاریخ شمسی استاندارد
-            const faDate = new Intl.DateTimeFormat('fa-IR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            }).format(date);
-            el.innerText = faDate;
-        });
-    }
+            {{/* ۲. توضیح */}}
+            <p class="text-light mb-1">{{ .desc }}</p>
 
-    function showPage(page) {
-        const start = (page - 1) * cardsPerPage;
-        const end = start + cardsPerPage;
+            {{/* ۳. منبع و ۴. تاریخ */}}
+            <div class="post-meta" style="color: #999; font-size: 0.85em;">
+              <span class="post-source">{{ .source }}</span>
+              <span class="post-meta-sep"> | </span>
+              <span class="card-date" data-utc="{{ .date }}">در حال بارگذاری...</span>
+            </div>
 
-        cards.forEach((card, index) => {
-            card.style.display = (index >= start && index < end) ? 'flex' : 'none';
-        });
+          </div>
+          {{ end }}
 
-        document.getElementById('page-num').innerText = `صفحه ${page} از ${Math.ceil(cards.length / cardsPerPage)}`;
-        document.getElementById('prev-btn').disabled = (page === 1);
-        document.getElementById('next-btn').disabled = (end >= cards.length);
-    }
+        </div>
+      </div>
 
-    function changePage(step) {
-        currentPage += step;
-        showPage(currentPage);
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
+      {{/* صفحه‌بندی */}}
+      <nav>
+        <ul class="pagination justify-content-center mt-5">
+          <li><button id="prev-btn" onclick="changePage(-1)">قبلی</button></li>
+          <li><span id="page-num">صفحه ۱</span></li>
+          <li><button id="next-btn" onclick="changePage(1)">بعدی</button></li>
+        </ul>
+      </nav>
 
-    // اجرا
-    convertDates();
-    showPage(1);
-</script>
-  
- </div>
-    </section>
+    </div>
+  </section>
 </main>
 
+<script>
+  const cardsPerPage = 14;
+  let currentPage = 1;
+  const cards = Array.from(document.querySelectorAll('.news'));
 
+  // تبدیل تاریخ میلادی به شمسی
+  function convertDates() {
+    document.querySelectorAll('.card-date').forEach(el => {
+      const date = new Date(el.getAttribute('data-utc'));
+      if (isNaN(date)) {
+        el.innerText = '—';
+        return;
+      }
+      el.innerText = new Intl.DateTimeFormat('fa-IR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(date);
+    });
+  }
 
+  function showPage(page) {
+    const start = (page - 1) * cardsPerPage;
+    const end   = start + cardsPerPage;
+
+    cards.forEach((card, i) => {
+      card.style.display = (i >= start && i < end) ? 'block' : 'none';
+    });
+
+    const total = Math.ceil(cards.length / cardsPerPage);
+    document.getElementById('page-num').innerText = `صفحه ${page} از ${total}`;
+    document.getElementById('prev-btn').disabled = (page === 1);
+    document.getElementById('next-btn').disabled = (end >= cards.length);
+  }
+
+  function changePage(step) {
+    currentPage += step;
+    showPage(currentPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  convertDates();
+  showPage(1);
+</script>
 
 {{ end }}
