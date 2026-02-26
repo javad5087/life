@@ -63,49 +63,94 @@
   </section>
 </main>
 
+
 <script>
+  const sites = {{ .Site.Data.legal_sites.sites | jsonify }};
+  let allPosts = [];
   const cardsPerPage = 14;
   let currentPage = 1;
-  const cards = Array.from(document.querySelectorAll('.news'));
 
-  // تبدیل تاریخ میلادی به شمسی
-  function convertDates() {
-    document.querySelectorAll('.card-date').forEach(el => {
-      const date = new Date(el.getAttribute('data-utc'));
-      if (isNaN(date)) {
-        el.innerText = '—';
-        return;
+  async function fetchRSS() {
+    for (const site of sites) {
+      try {
+        const response = await fetch(site.url);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, 'application/xml');
+        
+        const items = xml.querySelectorAll('item');
+        items.forEach((item, i) => {
+          if (i < 15) {
+            allPosts.push({
+              title: item.querySelector('title')?.textContent || '—',
+              link: item.querySelector('link')?.textContent || '#',
+              date: item.querySelector('pubDate')?.textContent || '',
+              source: site.name,
+              desc: (item.querySelector('description')?.textContent || '').substring(0, 120)
+            });
+          }
+        });
+      } catch (e) {
+        console.error(`خطا در دریافت ${site.name}:`, e);
       }
-      el.innerText = new Intl.DateTimeFormat('fa-IR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }).format(date);
-    });
+    }
+
+    // مرتب‌سازی از جدید به قدیم
+    allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderPosts();
   }
 
-  function showPage(page) {
-    const start = (page - 1) * cardsPerPage;
-    const end   = start + cardsPerPage;
+  function convertToJalali(dateStr) {
+    const date = new Date(dateStr);
+    if (isNaN(date)) return '—';
+    return new Intl.DateTimeFormat('fa-IR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }).format(date);
+  }
 
-    cards.forEach((card, i) => {
-      card.style.display = (i >= start && i < end) ? 'block' : 'none';
+  function renderPosts() {
+    const container = document.getElementById('posts-container');
+    container.innerHTML = '';
+
+    const start = (currentPage - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+    const pagePosts = allPosts.slice(start, end);
+
+    pagePosts.forEach(post => {
+      const card = document.createElement('div');
+      card.className = 'col-md-6 text-right news';
+      card.innerHTML = `
+        <h6 class="mb-1 font-weight-600">
+          <a href="${post.link}" target="_blank">${post.title}</a>
+        </h6>
+        <p class="text-light mb-1">${post.desc}</p>
+        <div class="post-meta" style="color: #999; font-size: 0.85em;">
+          <span class="post-source">${post.source}</span>
+          <span class="post-meta-sep"> | </span>
+          <span class="card-date">${convertToJalali(post.date)}</span>
+        </div>
+      `;
+      container.appendChild(card);
     });
 
-    const total = Math.ceil(cards.length / cardsPerPage);
-    document.getElementById('page-num').innerText = `صفحه ${page} از ${total}`;
-    document.getElementById('prev-btn').disabled = (page === 1);
-    document.getElementById('next-btn').disabled = (end >= cards.length);
+    const total = Math.ceil(allPosts.length / cardsPerPage);
+    document.getElementById('page-num').innerText = `صفحه ${currentPage} از ${total}`;
+    document.getElementById('prev-btn').disabled = (currentPage === 1);
+    document.getElementById('next-btn').disabled = (end >= allPosts.length);
   }
 
   function changePage(step) {
     currentPage += step;
-    showPage(currentPage);
+    renderPosts();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  convertDates();
-  showPage(1);
+  // شروع کار
+  fetchRSS();
 </script>
+{{ end }}
 
 {{ end }}
+
