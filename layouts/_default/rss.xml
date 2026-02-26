@@ -1,7 +1,7 @@
 {{ define "main" }}
 <!-- Main Content -->
 <main class="main-content">
-  <section class="section">
+  <section class="section pb-5 pt-2">
     <div dir="rtl" class="container">
 
       {{ $allPosts := slice }}
@@ -117,4 +117,5 @@
 </script>
 
 {{ end }}
+
 
