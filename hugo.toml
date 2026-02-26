@@ -58,8 +58,9 @@ crime  = "book/:filename"
   indices = [
     { name = "categories", weight = 50 }
   ]
-  
+
   [outputs]
     home = ["HTML", "RSS", "JSON"]
+    page = ["html", "json"]
  
 
