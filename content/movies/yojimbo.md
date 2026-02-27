@@ -50,5 +50,6 @@ stars: "Toshirô Mifune، Eijirô Tôno، Tatsuya Nakadai"
 - این فیلم در لیست « بهترین فیلمهای تاریخ سینما » راجر ایبرت قرار دارد.[^2]
 
 
+
 [^1]: [ویکیپدیا](https://en.wikipedia.org/wiki/Yojimbo)
 [^2]: [فیلم مگ](https://moviemag.ir/63824/%db%8c%d9%88%d8%ac%db%8c%d9%85%d8%a8%d9%88-yojimbo-%d8%a8%d9%87-%da%a9%d8%a7%d8%b1%da%af%d8%b1%d8%af%d8%a7%d9%86%db%8c-%d8%a2%da%a9%db%8c%d8%b1%d8%a7-%da%a9%d9%88%d8%b1%d9%88%d8%b3%d8%a7%d9%88%d8%a7/)
