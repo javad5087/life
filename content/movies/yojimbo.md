@@ -1,6 +1,6 @@
 ---
 title: یوجیمبو
-entitle: "Akira Kurosawa"
+entitle: "Yojimbo"
 date: ""
 draft: false
 categories:
