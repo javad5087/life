@@ -5,7 +5,7 @@ date: ""
 draft: false
 categories:
   - movies
-cover: "/images/youjimbo.jpg"
+cover: "/images/movie/youjimbo.jpg"
 summary: "در یکی از شهرهای ژاپن، جایی که قانونی وجود ندارد و کلانتر شهر فاسد و
   خودفروخته است، یک نفر برای اجرای عدالت از راه می‌رسد…"
 IMDb: "8.2"
