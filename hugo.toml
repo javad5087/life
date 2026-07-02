@@ -40,11 +40,7 @@ crime  = "book/:filename"
     identifier = "i-pen"
     url = "/music/"
     weight = 5
-    [[menu.main]]
-    name = "اخبار"
-    identifier = "i-pen"
-    url = "/content/form.md"
-    weight = 6
+   
 
 
  [taxonomies]
