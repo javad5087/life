@@ -43,7 +43,7 @@ crime  = "book/:filename"
     [[menu.main]]
     name = "اخبار"
     identifier = "i-pen"
-    url = "/rss"
+    url = "/content/form.md"
     weight = 6
 
 
@@ -62,5 +62,3 @@ crime  = "book/:filename"
   [outputs]
     home = ["HTML", "RSS", "JSON"]
     page = ["html", "json"]
- 
-
