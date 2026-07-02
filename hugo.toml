@@ -36,9 +36,9 @@ crime  = "book/:filename"
     url = "https://i-pen.ir"
     weight = 4
    [[menu.main]]
-    name = "موزیک"
+    name = "تماس"
     identifier = "i-pen"
-    url = "/music/"
+    url = "/form"
     weight = 5
    
 
