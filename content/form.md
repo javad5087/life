@@ -10,17 +10,17 @@ forms:
         input_type: text
         placeholder: نام
         required: true
-      - name: email
+      - name: ایمیل
         input_type: email
-        placeholder: Email address
+        placeholder: ایمیل
         required: true
-      - name: message
+      - name: پیام
         input_type: textarea
-        placeholder: Message
+        placeholder: پیام
         required: false
-      - name: submit
+      - name: ارسال
         input_type: submit
-        placeholder: Submit form
+        placeholder: ارسال
         required: true
 ---
-
+​
