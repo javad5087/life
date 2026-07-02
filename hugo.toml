@@ -38,7 +38,7 @@ crime  = "book/:filename"
    [[menu.main]]
     name = "تماس"
     identifier = "i-pen"
-    url = "/form"
+    url = "/form/"
     weight = 5
    
 
