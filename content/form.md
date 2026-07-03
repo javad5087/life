@@ -1,4 +1,6 @@
 ---
+title: "تماس"
+layout: "form"
 forms:
   - to: javadsajjadi24@gmail.com
     subject: New submission!
