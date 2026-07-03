@@ -4,7 +4,7 @@ layout: "form"
 forms:
   - to: javadsajjadi24@gmail.com
     subject: New submission!
-    redirect: /
+    redirect: https://javadsajjadi.ir
     form_engine: netlify
     placeholders: false
     fields: 
