@@ -9,7 +9,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-      </div>
+     </div>
       {{ $paginator := .Paginate (where .Site.RegularPages "Section" "books") }}
       <div class="row">
         {{ range $paginator.Pages }}
