@@ -10,7 +10,6 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
-
       {{ $paginator := .Paginate (where .Site.RegularPages "Section" "books") }}
       <div class="row">
         {{ range $paginator.Pages }}
