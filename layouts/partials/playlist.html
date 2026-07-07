@@ -1,15 +1,38 @@
 <div class="spotify-playlist bg-pale-warning">
-  <div dir="rtl" class="spotify-tracklist ">
+
+  <div id="category-buttons" class="mb-3 text-center">
+    <button onclick="filterTracks('all')">همه</button>
+    <button onclick="filterTracks('قانون تجارت')">قانون تجارت</button>
+    <button onclick="filterTracks('قانون مدنی')">قانون مدنی</button>
+    <button onclick="filterTracks('آیین دادرسی مدنی')">آیین دادرسی مدنی</button>
+  </div>
+
+  <div dir="rtl" class="spotify-tracklist">
     {{ range site.Data.playlist.songs }}
       <div class="spotify-track"
+           data-category="{{ .category }}"
            onclick="selectTrack('{{ .title }}','{{ .artist }}','{{ .url }}', this)">
-        <div class="track-info text-right ">
+        <div class="track-info text-right">
           <strong>{{ .title }}</strong><br>
           <span>{{ .artist }}</span>
         </div>
       </div>
     {{ end }}
   </div>
+
+</div>
+
+<script>
+function filterTracks(category) {
+    document.querySelectorAll(".spotify-track").forEach(function(track) {
+        if (category === "all" || track.dataset.category === category) {
+            track.style.display = "";
+        } else {
+            track.style.display = "none";
+        }
+    });
+}
+</script>
 
   
 
