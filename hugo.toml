@@ -31,15 +31,15 @@ crime  = "book/:filename"
     url = "/movies/"
     weight = 3
   [[menu.main]]
+    name = "قانون"
+    identifier = "i-pen"
+    url = "/music/"
+    weight = "6"
+   [[menu.main]]
     name = "قلم‌من"
     identifier = "pen"
     url = "https://i-pen.ir"
     weight = 4
-   [[menu.main]]
-    name = "تماس"
-    identifier = "i-pen"
-    url = "/form/"
-    weight = 5
    
 
 
