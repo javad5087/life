@@ -37,31 +37,26 @@ page = ["HTML", "JSON"]
 name = "خانه"
 url = "/"
 weight = 1
-
 [[menu.main]]
 name = "کتاب"
 identifier = "books"
 url = "/books/"
 weight = 2
-
 [[menu.main]]
 name = "فیلم"
 identifier = "movies"
 url = "/movies/"
 weight = 3
-
 [[menu.main]]
 name = "صدا"
 identifier = "law"
 url = "/music/"
 weight = 4
-
 [[menu.main]]
 name = "قلم من"
 identifier = "pen"
 url = "https://i-pen.ir"
 weight = 5
-
 [[menu.main]]
 name = "تماس"
 identifier = "form"
