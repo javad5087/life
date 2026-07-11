@@ -1,0 +1,73 @@
+{{ define "main" }}
+<link rel="stylesheet" href="{{ "css/laws.css" | absURL }}">
+
+{{ $law := index .Site.Data.laws .Params.law_key }}
+
+<div class="laws-scope" id="laws-scope-root">
+  <div class="law-page">
+    <div class="law-page-header">
+      <a class="back" href="{{ "/laws/" | relURL }}">→ بازگشت به مجموعه قوانین</a>
+      <h1>{{ if $law }}{{ $law.title }}{{ else }}{{ .Title }}{{ end }}</h1>
+      {{ if $law }}
+      <div class="law-sub">
+        مصوب {{ $law.approved_date | default "—" }}
+        {{ with $law.notes }} · {{ . }}{{ end }}
+        · {{ len $law.articles }} ماده
+      </div>
+      {{ end }}
+    </div>
+
+    {{ if and $law (gt (len $law.articles) 0) }}
+    <div class="law-toolbar">
+      <div class="filter-group">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="text" id="madeh-filter-input" placeholder="فیلتر مواد این قانون…" autocomplete="off">
+        <span class="filter-count" id="madeh-filter-count"></span>
+      </div>
+
+      <div class="toolbar-divider"></div>
+
+      <div class="toolbar-btns" role="group" aria-label="فونت">
+        <button type="button" class="toolbar-btn" data-font-btn="vazir" title="فونت وزیرمتن">و</button>
+        <button type="button" class="toolbar-btn" data-font-btn="naskh" title="فونت نسخ کتابی">ن</button>
+        <button type="button" class="toolbar-btn" data-font-btn="system" title="فونت ساده سیستم">س</button>
+      </div>
+
+      <div class="toolbar-divider"></div>
+
+      <div class="toolbar-btns" role="group" aria-label="اندازه فونت">
+        <button type="button" class="toolbar-btn" id="font-size-dec" title="کوچک‌تر">A−</button>
+        <button type="button" class="toolbar-btn" id="font-size-reset" title="اندازه پیش‌فرض">A</button>
+        <button type="button" class="toolbar-btn" id="font-size-inc" title="بزرگ‌تر">A+</button>
+      </div>
+
+      <div class="toolbar-divider"></div>
+
+      <button type="button" class="toolbar-btn" id="theme-toggle" title="حالت روز/شب">
+        <span id="theme-icon">☾</span>
+      </button>
+    </div>
+
+    <div id="madeh-list">
+      {{ range $law.articles }}
+      <article class="madeh" id="madeh-{{ .number }}">
+        <span class="madeh-num">{{ .number }}</span>
+        <p class="madeh-text">{{ .text }}</p>
+        {{ with .note }}<div class="madeh-note">توضیح: {{ . }}</div>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
+      <p class="law-empty-note">
+        متن مواد این قانون هنوز در سایت بارگذاری نشده است. برای افزودن، فایل
+        <code>data/laws/{{ .Params.law_key }}.yaml</code> را مطابق نمونهٔ
+        «قانون حمایت خانواده» تکمیل کنید.
+      </p>
+    {{ end }}
+  </div>
+</div>
+
+<script src="{{ "js/laws-search.js" | absURL }}" defer></script>
+{{ end }}
