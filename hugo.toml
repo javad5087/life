@@ -5,7 +5,6 @@ defaultContentLanguage = "fa"
 enableRobotsTXT = true
 summaryLength = "30"
 
-
 paginate = 3
 
 [params]
