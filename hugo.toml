@@ -1,63 +1,69 @@
-baseURL = "https://javadsajjadi.ir"
-languageCode = "fa"
-title = "جوادسجادی"
+baseURL = "https://javadsajjadi.ir/"
+languageCode = "fa-IR"
+title = "جواد سجادی"
 defaultContentLanguage = "fa"
 enableRobotsTXT = true
-summaryLength = "30"
-
+summaryLength = 30
 paginate = 3
 
 [params]
-  description = "فارغ‌التحصیل حقوق، عضو کانون نویسندگان ایران"
-  author = "سیدجواد سجادی"
-  faviconfile            = "img/leaf.ico"
+description = "فارغ‌التحصیل حقوق، عضو کانون نویسندگان ایران"
+author = "سید جواد سجادی"
+faviconfile = "img/leaf.ico"
+
 [permalinks]
-crime  = "book/:filename"
+crime = "book/:filename"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[related]
+threshold = 80
+includeNewer = true
+toLower = true
+
+[[related.indices]]
+name = "categories"
+weight = 50
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML", "JSON"]
 
 [menu]
-  [[menu.main]]
-    name = "خانه"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "کتاب‌"
-     identifier = "books"
-    url = "/books/"
-    weight = 2
-  [[menu.main]]
-    name = "فیلم‌"
-    identifier = "movies"
-    url = "/movies/"
-    weight = 3
-  [[menu.main]]
-    name = "صدا"
-    identifier = "law"
-    url = "/music/"
-    weight = 4
-  [[menu.main]]
-    name = "قلم‌من"
-    identifier = "pen"
-    url = "https://i-pen.ir"
-    weight = 5
-  [[menu.main]]
-    name = "تماس"
-    identifier = "form"
-    url = "/form/"
-    weight = 6
 
+[[menu.main]]
+name = "خانه"
+url = "/"
+weight = 1
 
- [taxonomies]
-  category = "categories"
-  tag = "tags"
+[[menu.main]]
+name = "کتاب"
+identifier = "books"
+url = "/books/"
+weight = 2
 
- [related]
-  threshold = 80
-  includeNewer = true
-  toLower = true
-  indices = [
-    { name = "categories", weight = 50 }
-  ]
+[[menu.main]]
+name = "فیلم"
+identifier = "movies"
+url = "/movies/"
+weight = 3
 
-  [outputs]
-    home = ["HTML", "RSS", "JSON"]
-    page = ["html", "json"]
+[[menu.main]]
+name = "صدا"
+identifier = "law"
+url = "/music/"
+weight = 4
+
+[[menu.main]]
+name = "قلم من"
+identifier = "pen"
+url = "https://i-pen.ir"
+weight = 5
+
+[[menu.main]]
+name = "تماس"
+identifier = "form"
+url = "/form/"
+weight = 6
