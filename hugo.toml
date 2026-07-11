@@ -39,12 +39,12 @@ crime  = "book/:filename"
     name = "قلم‌من"
     identifier = "pen"
     url = "https://i-pen.ir"
-    weight = 6
+    weight = 5
   [[menu.main]]
     name = "تماس"
     identifier = "form"
     url = "/form/"
-    weight = 7
+    weight = 6
 
 
  [taxonomies]
