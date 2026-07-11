@@ -6,7 +6,7 @@ enableRobotsTXT = true
 summaryLength = "30"
 
 
- paginate = 3
+paginate = 3
 
 [params]
   description = "فارغ‌التحصیل حقوق، عضو کانون نویسندگان ایران"
