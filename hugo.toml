@@ -31,20 +31,25 @@ crime  = "book/:filename"
     url = "/movies/"
     weight = 3
   [[menu.main]]
-    name = "قانون"
+    name = "صدا"
     identifier = "law"
     url = "/music/"
     weight = 4
+   [[menu.main]]
+    name = "قوانین"
+    identifier = "laws"
+    url = "/laws/"
+    weight = 5
   [[menu.main]]
     name = "قلم‌من"
     identifier = "pen"
     url = "https://i-pen.ir"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "تماس"
     identifier = "form"
     url = "/form/"
-    weight = 6
+    weight = 7
 
 
  [taxonomies]
