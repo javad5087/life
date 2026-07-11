@@ -4,7 +4,9 @@ title = "جواد سجادی"
 defaultContentLanguage = "fa"
 enableRobotsTXT = true
 summaryLength = 30
-paginate = 3
+
+[pagination]
+pagerSize = 3
 
 [params]
 description = "فارغ‌التحصیل حقوق، عضو کانون نویسندگان ایران"
