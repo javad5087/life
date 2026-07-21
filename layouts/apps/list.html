@@ -1,55 +1,88 @@
 {{ define "main" }}
-<!-- Main Content -->
-<main class="main-content  bg-gray">
- <section id="lity" class="section">
-        <div class="container">
-           {{ $paginator := .Paginate (where .Site.RegularPages "Section" "apps") }}   
-          <div class="row gap-y align-items-center">
-          {{ range $paginator.Pages }}
-            <div class="col-lg-5 mr-auto">
-              <h2>{{ .Title }}</h2>
-              <br>
-              {{ if .Params.summary }}
-              <p class="lead-2">{{ .Params.summary }}</p>
-               {{ else }}
-                  <p class="summary">{{ .Summary }}</p>
-                  {{ end }}
-                  <a class="small ls-1" href="{{ .Permalink }}">ادامه مطلب <span class="pl-1">&xrarr;</span></a>
-             
-            </div>
-                  
-                             {{ with .Params.gallery }}
-                  <div class="col-lg-6">
-                  
-                      <div class="gallery gallery-4-type4">
-                  
-                          {{ with index . 0 }}
-                          <a class="gallery-item" href="{{ . }}" data-provide="lightbox" data-gallery="property-{{ $.File.UniqueID }}">
-                              <img src="{{ . }}" alt="">
-                          </a>
-                          {{ end }}
-                  
-                          <div class="gallery-item-group">
-                              {{ range first 3 (after 1 .) }}
-                              <a class="gallery-item" href="{{ . }}" data-provide="lightbox" data-gallery="property-{{ $.File.UniqueID }}">
-                                  <img src="{{ . }}" alt="">
-                              </a>
-                              {{ end }}
-                          </div>
-                  
-                          <!-- تصاویر مخفی فقط برای Lightbox -->
-                          {{ range after 4 . }}
-                          <a href="{{ . }}" data-provide="lightbox" data-gallery="property-{{ $.File.UniqueID }}" style="display:none;"></a>
-                          {{ end }}
-                  
-                      </div>
-                  
-                  </div>
-                  {{ end }}
-          </div>
-        </div>
-      </section>
 
-  
+<main class="main-content bg-gray">
+
+<section id="lity" class="section">
+  <div class="container">
+
+    {{ $paginator := .Paginate (where .Site.RegularPages "Section" "apps") }}
+
+    {{ range $paginator.Pages }}
+    {{ $page := . }}
+
+    <div class="row gap-y align-items-center mb-8">
+
+      <div class="col-lg-5 mr-auto">
+        <h2>{{ .Title }}</h2>
+
+        {{ if .Params.summary }}
+          <p class="lead-2">{{ .Params.summary }}</p>
+        {{ else }}
+          <p class="summary">{{ .Summary }}</p>
+        {{ end }}
+
+        <a class="small ls-1" href="{{ .Permalink }}">
+          ادامه مطلب
+          <span class="pl-1">&xrarr;</span>
+        </a>
+      </div>
+
+      {{ with .Params.gallery }}
+      <div class="col-lg-6">
+
+        <div class="gallery gallery-4-type4">
+
+          <!-- عکس اول -->
+          {{ with index . 0 }}
+          <a class="gallery-item"
+             href="{{ . }}"
+             data-provide="lightbox"
+             data-gallery="property-{{ $page.File.UniqueID }}">
+            <img src="{{ . }}" alt="">
+          </a>
+          {{ end }}
+
+          <div class="gallery-item-group">
+
+            <!-- عکس دوم تا چهارم -->
+            {{ range first 3 (after 1 .) }}
+            <a class="gallery-item"
+               href="{{ . }}"
+               data-provide="lightbox"
+               data-gallery="property-{{ $page.File.UniqueID }}">
+              <img src="{{ . }}" alt="">
+            </a>
+            {{ end }}
+
+          </div>
+
+          <!-- تصاویر مخفی -->
+          {{ range after 4 . }}
+          <a href="{{ . }}"
+             data-provide="lightbox"
+             data-gallery="property-{{ $page.File.UniqueID }}"
+             style="display:none;"></a>
+          {{ end }}
+
+        </div>
+
+      </div>
+      {{ end }}
+
+    </div>
+
+    {{ end }}
+
+    <!-- صفحه‌بندی -->
+    <div class="row">
+      <div class="col-12 text-center">
+        {{ template "_internal/pagination.html" . }}
+      </div>
+    </div>
+
+  </div>
+</section>
+
 </main>
+
 {{ end }}
