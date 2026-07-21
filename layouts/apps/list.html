@@ -62,7 +62,9 @@
 
     <h4>امکانات</h4>
 
-    <ul>
+   <div class="app-footer">
+
+    <ul class="app-features">
         {{ range .Params.features }}
             <li>{{ . }}</li>
         {{ end }}
@@ -71,6 +73,8 @@
     <a class="download-btn" href="{{ .Params.download }}">
         دانلود برنامه
     </a>
+
+</div>
       </div>
 
       {{ with .Params.gallery }}
