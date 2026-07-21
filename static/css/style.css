@@ -191,3 +191,18 @@ audio {
   background-color: #f0f4f7;
   box-shadow: 0 1px 9px rgba(0,0,0,0.05);
 }
+.app-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    direction:rtl;
+}
+
+.app-features{
+    columns:2;
+    column-gap:30px;
+}
+
+.download-btn{
+    white-space:nowrap;
+}
