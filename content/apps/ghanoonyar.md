@@ -1,23 +1,22 @@
 ---
-title: آموزش جامع آیین دادرسی مدنی
-date: 2026-02-21T22:08:02.090Z
-draft: false
+title: "قانون‌یار"
 categories: ["apps"]
-tags: 
-summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
-
-  صلاحیت محلی در دعوای مطالبه وجه چک
-
-  آثار دادخواست
-
-  آموزش مفهومی آیین دادرسی مدنی در قالب دسته بندی های موضوعی و مقایسه ای و بررسی
-  مواد مرتبط که گاه به صورت پراکنده در قانون بیان شده اند، همراه با مثال های
-  متعدد و بررسی همه قوانین خاص درس آیین دادرسی مدنی از اوصاف این کتاب است."
+cover: "/images/apps/ghanoonyar01.jpg"
+summary: "اپ جامع قوانین ایران"
+version: "1.0.0"
+developer: "جواد سجادی"
+platform: "Android"
+language: "فارسی"
+size: "18 MB"
+update: "1405/04/20"
+requirements: "Android 8+"
+download: "https://example.com/app.apk"
+features:
+  - جستجوی هوشمند
+  - بیش از ۳۰ قانون
 gallery:
   - /images/apps/ghanoonyar01.jpg
   - /images/apps/ghanoonyar02.jpg
   - /images/apps/ghanoonyar03.jpg
   - /images/apps/ghanoonyar04.jpg
-publisher: "مکتوب آخر"
-year: "1400"
 ---
