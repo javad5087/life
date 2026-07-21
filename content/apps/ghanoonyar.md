@@ -2,9 +2,8 @@
 title: آموزش جامع آیین دادرسی مدنی
 date: 2026-02-21T22:08:02.090Z
 draft: false
-categories: ["book"]
+categories: ["apps"]
 tags: 
-cover: "/images/book/Comprehensive training in civil procedure.jpg"
 summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
 
   صلاحیت محلی در دعوای مطالبه وجه چک
@@ -14,12 +13,13 @@ summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
   آموزش مفهومی آیین دادرسی مدنی در قالب دسته بندی های موضوعی و مقایسه ای و بررسی
   مواد مرتبط که گاه به صورت پراکنده در قانون بیان شده اند، همراه با مثال های
   متعدد و بررسی همه قوانین خاص درس آیین دادرسی مدنی از اوصاف این کتاب است."
-readingTime: "150"
-readingProgress: "8"
-author: "دکتر محمد مهدی توکلی"
-translator: ""
-pages: "868"
+gallery:
+  - /images/1.jpg
+  - /images/2.jpg
+  - /images/3.jpg
+  - /images/4.jpg
+  - /images/5.jpg
+  - /images/6.jpg
 publisher: "مکتوب آخر"
 year: "1400"
-start: "1404/11/03"
 ---
