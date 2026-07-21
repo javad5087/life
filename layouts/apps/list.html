@@ -35,10 +35,10 @@
           <!-- عکس اول -->
           {{ with index . 0 }}
           <a class="gallery-item"
-             href="/images/{{ . }}"
+             href="{{ . }}"
              data-provide="lightbox"
              data-gallery="property-{{ $page.File.UniqueID }}">
-            <img src="{{ . }}" alt="">
+            <img src="{{ . | relURL }}" alt="">
           </a>
           {{ end }}
 
@@ -50,7 +50,7 @@
                href="{{ . }}"
                data-provide="lightbox"
                data-gallery="property-{{ $page.File.UniqueID }}">
-              <img src="{{ . }}" alt="">
+              <img src="{{ . | relURL }}" alt="">
             </a>
             {{ end }}
 
