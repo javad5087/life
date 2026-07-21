@@ -1,8 +1,7 @@
 ---
-title: "قانون‌یار"
+title: "اپلیکیشن صوتی قوانین ایران"
 categories: ["apps"]
-cover: "/images/apps/ghanoonyar01.jpg"
-summary: "اپ جامع قوانین ایران"
+summary: " خوانش قوانین ایران برای قوانین مدنی، آیین دادرسی مدنی، آیین دادرسی کیفری، تجارت، جزا"
 version: "1.0.0"
 developer: "جواد سجادی"
 platform: "Android"
