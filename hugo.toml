@@ -65,3 +65,10 @@ name = "تماس"
 identifier = "form"
 url = "/form/"
 weight = 6
+
+[[menu.main]]
+name = "اپ‌ها"
+identifier = "apps"
+url = "/apps/"
+weight = 7
+[[menu.main]]
