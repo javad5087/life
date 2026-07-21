@@ -21,10 +21,56 @@
           <p class="summary">{{ .Summary }}</p>
         {{ end }}
 
-        <a class="small ls-1" href="{{ .Permalink }}">
-          ادامه مطلب
-          <span class="pl-1">&xrarr;</span>
-        </a>
+         <table class="app-table">
+
+        <tr>
+            <td>نسخه</td>
+            <td>{{ .Params.version }}</td>
+        </tr>
+
+        <tr>
+            <td>توسعه‌دهنده</td>
+            <td>{{ .Params.developer }}</td>
+        </tr>
+
+        <tr>
+            <td>سیستم عامل</td>
+            <td>{{ .Params.platform }}</td>
+        </tr>
+
+        <tr>
+            <td>زبان</td>
+            <td>{{ .Params.language }}</td>
+        </tr>
+
+        <tr>
+            <td>حجم</td>
+            <td>{{ .Params.size }}</td>
+        </tr>
+
+        <tr>
+            <td>آخرین بروزرسانی</td>
+            <td>{{ .Params.update }}</td>
+        </tr>
+
+        <tr>
+            <td>نیازمند</td>
+            <td>{{ .Params.requirements }}</td>
+        </tr>
+
+    </table>
+
+    <h2>امکانات</h2>
+
+    <ul>
+        {{ range .Params.features }}
+            <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+
+    <a class="download-btn" href="{{ .Params.download }}">
+        دانلود برنامه
+    </a>
       </div>
 
       {{ with .Params.gallery }}
