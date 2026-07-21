@@ -35,7 +35,7 @@
           <!-- عکس اول -->
           {{ with index . 0 }}
           <a class="gallery-item"
-             href="{{ . }}"
+             href="/images/{{ . }}"
              data-provide="lightbox"
              data-gallery="property-{{ $page.File.UniqueID }}">
             <img src="{{ . }}" alt="">
