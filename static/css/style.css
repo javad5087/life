@@ -198,10 +198,10 @@ audio {
     direction:rtl;
 }
 
-.app-features{
+/*.app-features{
     columns:2;
     column-gap:30px;
-}
+}*/
 
 .download-btn{
     white-space:nowrap;
