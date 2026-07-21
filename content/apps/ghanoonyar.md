@@ -14,10 +14,10 @@ summary: "دوره 2 جلدی آموزش جامع آیین دادرسی مدنی
   مواد مرتبط که گاه به صورت پراکنده در قانون بیان شده اند، همراه با مثال های
   متعدد و بررسی همه قوانین خاص درس آیین دادرسی مدنی از اوصاف این کتاب است."
 gallery:
-  - /images/apps/ghanoonyar01.jpg
-  - /images/apps/ghanoonyar02.jpg
-  - /images/apps/ghanoonyar03.jpg
-  - /images/apps/ghanoonyar04.jpg
+  - /apps/ghanoonyar01.jpg
+  - /apps/ghanoonyar02.jpg
+  - /apps/ghanoonyar03.jpg
+  - /apps/ghanoonyar04.jpg
 publisher: "مکتوب آخر"
 year: "1400"
 ---
