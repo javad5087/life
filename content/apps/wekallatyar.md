@@ -6,10 +6,10 @@ version: "0.1"
 developer: "سیدجواد سجادی"
 platform: "اندروید"
 language: "فارسی"
-size: "24.35 MB"
+size: "22.44 MB"
 update: "1405/04/31"
 requirements: "اندروید  ٨+"
-download: "https://yaprax.ir/apps/vekaltyar.apk"
+download: "https://yaprax.ir/apps/GhanoonYar.apk"
 features:
 - حالت شب و روز ، انتخاب قلم و اندازه آن 
 -  انتخاب پوسته(آبی-کرم-زرشکی)
