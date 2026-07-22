@@ -62,10 +62,10 @@
           </div>
         </div>
       </div>
-      <h5 dir="rtl" class="divider text-right text-dark"> دسته‌ها: {{ range .Site.Menus.main }}
+      <h5 dir="rtl" class="divider text-right text-dark"> {{ range .Site.Menus.main }}
         <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
-        |  نوشته‌ها {{ len .Site.RegularPages }}
+        
       </h5>
     </div>
   </header><!-- /.header -->
