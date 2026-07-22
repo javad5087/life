@@ -68,8 +68,7 @@ t<e.childNodes.length;t++)traverse(e.childNodes[t])}traverse(document.body)</scr
     </form>
   </div>
    <div>
-        نوشته‌ها {{ len .Site.RegularPages }}
-  </div>
+{{ len (where .Site.RegularPages "Section" "apps") }}  </div>
 </div>
 
 <!-- Scripts -->
