@@ -16,8 +16,8 @@ features:
 - تنظیم تایم خواب، نشانکردن قوانین و اشتراک‌ گذاری
 - نمایش قوانین دانلود شده بصورت آفلاین
 gallery:
-  - /images/apps/ghanoonyar01.jpg
-  - /images/apps/ghanoonyar02.jpg
-  - /images/apps/ghanoonyar03.jpg
-  - /images/apps/ghanoonyar04.jpg
+  - /images/apps/wekallatyar.jpg
+  - /images/apps/wekallatyar01.jpg
+  - /images/apps/wekallatyar02.jpg
+  - /images/apps/wekallatyar03.jpg
 ---
