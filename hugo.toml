@@ -55,20 +55,15 @@ identifier = "law"
 url = "/music/"
 weight = 4
 [[menu.main]]
-name = "قلم من"
-identifier = "pen"
-url = "https://i-pen.ir"
-weight = 5
-[[menu.main]]
 
 name = "تماس"
 identifier = "form"
 url = "/form/"
-weight = 6
+weight = 5
 
 [[menu.main]]
 name = "اپ‌ها"
 identifier = "apps"
 url = "/apps/"
-weight = 7
+weight = 6
 [[menu.main]]
