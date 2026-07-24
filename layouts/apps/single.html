@@ -1,7 +1,7 @@
 {{ define "main" }} <section class="section">
     <div class="container">
         <div style="border-radius: 5px;background:#fff;" class="container">
-            <div  class="row gap-y ">
+            <div dir="rtl" class="row gap-y ">
                 <div id="b" class="col-md-7 mx-auto text-justify lead text-dark">
                     <h3 class="fw-600 ">{{.Title}}</h3> <br>
                     {{ $page := . }} {{ with .Params.gallery }}
@@ -17,11 +17,10 @@
                         </div>
                     </div> 
                     {{ end }}
-                </div>
-                <h6>چکیده</h6>
+                    <h6>چکیده</h6>
                 <p>{{ .Content }}</p><br>
-            </div>
-            <div class="col-md-4 mx-auto text-right">
+                </div>
+                 <div class="col-md-4 mx-auto text-right">
                 <p></p>
                 <h4 class="divider w-00"> مشخــصات اپلیکیشن</h4>
                 <p>
@@ -56,7 +55,9 @@
                     </tr>
                 </table>
                 </p> {{ partial "related.html" . }} {{ partial "share-buttons.html" . }}
+                 </div>
             </div>
+          
         </div>
     </div>
     </div>
