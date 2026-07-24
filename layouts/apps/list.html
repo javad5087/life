@@ -13,7 +13,7 @@
     <div dir="rtl" class="row gap-y align-items-center mb-8 text-right">
 
       <div class="col-lg-5 mr-auto">
-        <h2><a href="{{ .Page.Permalink }}">{{ .Title }}</a></h2>
+        <h4><a href="{{ .Page.Permalink }}">{{ .Title }}</a></h4>
 
         {{ if .Params.summary }}
           <p class="lead-1">{{ .Params.summary }}</p>
@@ -32,7 +32,7 @@
         {{ end }}
     </ul>
 
-    <a class="btn btn-round btn-primary" href="{{ .Params.download }}">
+    <a class="btn btn-round btn-primary" href="{{ .Page.Permalink }}">
         دانلود برنامه
     </a>
 
