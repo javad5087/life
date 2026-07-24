@@ -6,37 +6,36 @@
         <div id="b" class="col-md-7 mx-auto text-justify lead text-dark">
           <h3 class="fw-600 ">{{.Title}}</h3>
           <br>
-          {{ with .Params.gallery }}
-      <div class="col-lg-6">
+  {{ $page := . }}
 
-        <div class="gallery gallery-4-type4" data-provide="photoswipe">
+{{ with .Params.gallery }}
 
-          <!-- عکس اول -->
-          {{ with index . 0 }}
-          <a class="gallery-item"
-             href="{{ . }}"
-             data-provide="lightbox"
-             data-gallery="property-{{ $page.File.UniqueID }}">
-            <img src="{{ . | relURL }}" alt="">
-          </a>
-          {{ end }}
+<div class="gallery gallery-4-type4" data-provide="photoswipe">
 
-          <div class="gallery-item-group">
+    {{ with index . 0 }}
+    <a class="gallery-item"
+       href="{{ . }}"
+       data-provide="lightbox"
+       data-gallery="property-{{ $page.File.UniqueID }}">
+        <img src="{{ . }}" alt="">
+    </a>
+    {{ end }}
 
-            <!-- عکس دوم تا چهارم -->
-            {{ range first 3 (after 1 .) }}
-            <a class="gallery-item"
-               href="{{ . }}"
-               data-provide="lightbox"
-               data-gallery="property-{{ $page.File.UniqueID }}">
-              <img src="{{ . | relURL }}" alt="">
-            </a>
-            {{ end }}
+    <div class="gallery-item-group">
 
-          </div>
+        {{ range first 3 (after 1 .) }}
+        <a class="gallery-item"
+           href="{{ . }}"
+           data-provide="lightbox"
+           data-gallery="property-{{ $page.File.UniqueID }}">
+            <img src="{{ . }}" alt="">
+        </a>
+        {{ end }}
 
-         
-        </div>
+    </div>
+
+</div>
+
 {{ end }}
       </div>
           <h6>چکیده</h6>
