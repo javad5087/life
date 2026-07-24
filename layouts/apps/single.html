@@ -55,9 +55,25 @@
 
 
                     <h6>چکیده</h6>
-
+                         {{ if .Params.summary }}
+                         <p class="lead-1">{{ .Params.summary }}</p>
+                                {{ else }}
+                                  <p class="summary">{{ .Summary }}</p>
+                                {{ end }}
+                        
+                                
+                            <h4>امکانات</h4>
+                        
+                           <div class="app-footer">
+                        
+                            <ul class="app-features">
+                                {{ range .Params.features }}
+                                    <li>{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                           </div>
                     {{ $page.Content }}
-
+                        
 
                 </div>
 
