@@ -1,69 +1,140 @@
-{{ define "main" }} <section class="section">
+{{ define "main" }}
+
+<section class="section">
     <div class="container">
+
         <div style="border-radius: 5px;background:#fff;" class="container">
-            <div dir="rtl" class="row gap-y ">
+
+            <div dir="rtl" class="row gap-y">
+
+                {{ $page := . }}
+
                 <div id="b" class="col-md-7 mx-auto text-justify lead text-dark">
-                    <h3 class="fw-600">{{.Title}}</h3> <br>
-                    {{ $page := . }} {{ with .Params.gallery }}
-                    <div class="gallery gallery-4-type4" data-provide="photoswipe"> {{ with index . 0 }} 
-                        <a class="gallery-item" href="{{ . }}" data-provide="lightbox" data-gallery="property-{{ $page.File.UniqueID }}"> <img src="{{ . }}" alt=""> </a>
-                     {{ end }}
-                        <div class="gallery-item-group"> {{ range first 3 (after 1 .) }}
-                            <a class="gallery-item" href="{{ . }}" data-provide="lightbox" data-gallery="property-{{ $page.File.UniqueID }}">
+
+                    <h3 class="fw-600">{{ .Title }}</h3>
+                    <br>
+
+                    {{ with .Params.gallery }}
+
+                    <div class="gallery gallery-4-type4" data-provide="photoswipe">
+
+                        {{ with index . 0 }}
+
+                        <a class="gallery-item"
+                           href="{{ . }}"
+                           data-provide="lightbox"
+                           data-gallery="property-{{ $page.File.UniqueID }}">
+
                             <img src="{{ . }}" alt="">
-                            </a> 
-                            {{ end }} 
+
+                        </a>
+
+                        {{ end }}
+
+
+                        <div class="gallery-item-group">
+
+                            {{ range first 3 (after 1 .) }}
+
+                            <a class="gallery-item"
+                               href="{{ . }}"
+                               data-provide="lightbox"
+                               data-gallery="property-{{ $page.File.UniqueID }}">
+
+                                <img src="{{ . }}" alt="">
+
+                            </a>
+
+                            {{ end }}
+
                         </div>
-                        <h6>چکیده</h6>
-                        {{ .Content }}
-                    </div>  
+
+                    </div>
+
                     {{ end }}
-                   
-               
+
+
+                    <h6>چکیده</h6>
+
+                    {{ $page.Content }}
+
+
                 </div>
-                 <div class="col-md-4 mx-auto text-right">
-                <p></p>
-                <h4 class="divider w-00"> مشخــصات اپلیکیشن</h4>
-                <p>
-                <table class="table table-striped">
-                    <tr>
-                        <td>نسخه</td>
-                        <td>{{ .Params.version }}</td>
-                    </tr>
-                    <tr>
-                        <td>توسعه‌دهنده</td>
-                        <td>{{ .Params.developer }}</td>
-                    </tr>
-                    <tr>
-                        <td>سیستم عامل</td>
-                        <td>{{ .Params.platform }}</td>
-                    </tr>
-                    <tr>
-                        <td>زبان</td>
-                        <td>{{ .Params.language }}</td>
-                    </tr>
-                    <tr>
-                        <td>حجم</td>
-                        <td>{{ .Params.size }}</td>
-                    </tr>
-                    <tr>
-                        <td>آخرین بروزرسانی</td>
-                        <td>{{ .Params.update }}</td>
-                    </tr>
-                    <tr>
-                        <td>نیازمند</td>
-                        <td>{{ .Params.requirements }}</td>
-                    </tr>
-                    <tr>
-                        <td>دانلود</td>
-                        <td class="background-color: #eff6ee;">{{ .Params.download }}</td>
-                    </tr>
-                </table>
-                </p> {{ partial "related.html" . }} {{ partial "share-buttons.html" . }}
-                 </div>
+
+
+                <div class="col-md-4 mx-auto text-right">
+
+                    <h4 class="divider w-00">مشخــصات اپلیکیشن</h4>
+
+
+                    <table class="table table-striped">
+
+                        <tr>
+                            <td>نسخه</td>
+                            <td>{{ .Params.version }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>توسعه‌دهنده</td>
+                            <td>{{ .Params.developer }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>سیستم عامل</td>
+                            <td>{{ .Params.platform }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>زبان</td>
+                            <td>{{ .Params.language }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>حجم</td>
+                            <td>{{ .Params.size }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>آخرین بروزرسانی</td>
+                            <td>{{ .Params.update }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>نیازمند</td>
+                            <td>{{ .Params.requirements }}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>دانلود</td>
+                            <td style="background-color:#eff6ee;">
+                                {{ .Params.download }}
+                            </td>
+                        </tr>
+
+
+                    </table>
+
+
+                    {{ partial "related.html" . }}
+
+                    {{ partial "share-buttons.html" . }}
+
+
+                </div>
+
+
             </div>
-          
+
         </div>
+
     </div>
-    </div>
-</section> {{ end }}
+</section>
+
+{{ end }}
