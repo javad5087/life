@@ -10,7 +10,7 @@ language: "فارسی"
 size: "24.35 MB"
 update: "1405/04/20"
 requirements: "اندروید  ٨+"
-download: "https://yaprax.ir/apps/vekaltyar.apk"
+download: "https://yaprax.ir/apps/gymnastic.apk"
 features:
 -  پرینت از پروفایک ورزشکاران و درامد کل مربی
 -  انتخاب قلم و اندازه آن
