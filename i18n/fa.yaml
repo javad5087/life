@@ -30,6 +30,9 @@
 
 - id: books
   translation: "کتاب‌های خوانده شده : "
+  
+- id: apps
+  translation: "اپ‌های ساخته شده:"
 
 - id: linux
   translation: "نوشته‌های روزانه  : "
