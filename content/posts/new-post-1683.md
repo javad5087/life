@@ -4,7 +4,7 @@ date: '2026-07-29T02:30:00+03:30'
 category: books
 author: سیدجوادسجادی
 tags: []
-draft: true
+draft: false
 translator: جواد سجادی
 pages: ٣٣٣
 start: 1404/05/07
