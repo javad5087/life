@@ -8,7 +8,7 @@
          <h4 class="badge badge-pale badge-danger lead-1 font-weight: 600"><a href="{{ .Page.Permalink }}">{{ T "books" }}<span class="badge badge-pale badge-danger lead-1 font-weight: 600">{{ $count := len .Pages }}{{ $count }} کتاب</span></a></h4>
       </div>
       {{ $paginator := .Paginate (where .Site.RegularPages "Section" "books") }}
-      <div class="row">
+      <div class="row"> 
         {{ range $paginator.Pages }}
         <div class="col-md-10 col-xl-9 mx-auto">
           <div class="card hover-shadow-7 my-4">
