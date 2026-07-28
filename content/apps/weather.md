@@ -1,7 +1,7 @@
 ---
-title: "اپلیکیشن آب و هوا چغرافیای کردستان"
+title: "اپلیکیشن آب و هوای چغرافیای کردستان"
 categories: ["apps"]
-summary: " برنامه  "
+summary: ""
 version: "0.5"
 developer: "سیدجواد سجادی "
 platform: "اندروید"
@@ -12,8 +12,10 @@ requirements: "اندروید  7+"
 download: "https://yaprax.ir/apps/vekaltyar.apk"
 features:
 - حالت شب و روز 
--  انتخاب قلم و اندازه آن
--  انتخاب پوسته(آبی-کرم-زرشکی)
+- استفاده از موقعیت گوشی برای تعینن آب و هوا
+- جستجو در شهرهای کردستان و موقعیتهای دیگر.
+- انتخاب شهرهای مورد علاقه.
+- هشدارهای جوی و هواشناسی.
 gallery:
   - /images/apps/weather01.jpg
   - /images/apps/weather02.jpg
