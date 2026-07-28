@@ -1,15 +1,16 @@
 ---
 title: "اپلیکیشن آب و هوای چغرافیای کردستان"
+date: 2026-07-25T21:48:40.816Z
 categories: ["apps"]
-summary: ""
+summary: "اپلیکیشنی برای آگاهی از تغییرات جوی به نام آسمان، موقعیت یاب و کارایی ساده و روان .استفاده از api های گوگل برای تعیین موقعیت کاربر . تغییر ظاهر اپلیکیشن."
 version: "0.5"
 developer: "سیدجواد سجادی "
 platform: "اندروید"
 language: "فارسی"
-size: "24.35 MB"
-update: "1405/05/05"
+size: "24.83 MB"
+update: "1405/07/28"
 requirements: "اندروید  7+"
-download: "https://yaprax.ir/apps/vekaltyar.apk"
+download: "https://yaprax.ir/apps/Asman.apk"
 features:
 - حالت شب و روز 
 - استفاده از موقعیت گوشی برای تعینن آب و هوا
