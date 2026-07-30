@@ -6,11 +6,10 @@ author: جواد سجادی
 tags: []
 draft: false
 gallery:
-  - images/apps/rssyar04-049364.webp
-  - images/apps/rssyar03-047653.webp
-  - images/apps/rssyar02-045417.webp/
-  - images/apps/rssyar03-047653.webp/
   - /images/apps/rssyar01-042649.webp
+  - /images/apps/rssyar02-045417.webp
+  - /images/apps/rssyar03-047653.webp
+  - /images/apps/rssyar04-049364.webp
 slug: khbr-khvan
 description: بپی برا خواندن اخبار در سایتهای مختلف.خبرخوان فیدهای سایتهای مختلف را جمع و آنها را در سه حالت نشان میدهد.
 summary: برنامه‌ای برای واندن اخبار سایتهای مختلف . سی لایه برای نشان دادن مطالب و خلاصه کردن مطالب بوسیله هوش مصنوعی از مزیتهای این اپ است.
