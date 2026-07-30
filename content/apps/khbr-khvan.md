@@ -17,7 +17,7 @@ version: '1.7'
 developer: سیدجواد سجادی
 size: 24.87 MB
 update: 1405/05/07
-download: https://yaprax.ir/apps/khabarkhan.apk
+download: https://yaprax.ir/apps/khabaryar.apk
 features:
   - استفاده از هوش مصنوعی برای خلاصه اخبار
   - نشان دادن اخبار در سه لایه‌ی متفاوت
