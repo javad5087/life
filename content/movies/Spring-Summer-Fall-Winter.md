@@ -11,7 +11,7 @@ summary: در میانه‌ی طبیعت وحشی کره، یک استاد بو�
 IMDb: '8'
 time: 1h 43m
 year: '2003'
-Country:'کره'
+Country: کره
 Genres: درام
 Director: Kim Ki-duk
 Writer: ' Kim Ki-duk'
