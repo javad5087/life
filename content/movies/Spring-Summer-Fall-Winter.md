@@ -1,7 +1,7 @@
 ---
 title: بهار، تابستان، پاییز، زمستان
 date: '2026-08-02T14:55:49.030Z'
-category: فیلم‌ها (Movie)
+categories: ["movies"]
 author: جواد سجادی
 tags: [فیلم]
 draft: false
