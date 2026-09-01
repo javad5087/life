@@ -9,11 +9,11 @@ tags:
 draft: false
 slug: Spring-Summer-Fall-Winter
 entitle: Spring, Summer, Fall, Winter
-summary: در میانه‌ی طبیعت وحشی کره، یک استاد بودایی با صبر و حوصله پسری را بزرگ می‌کند و در عین حال از طریق تجربه و تمرین‌های بی‌پایان، خرد و شفقت را به او می‌آموزد  و روح او را پرورش می‌دهد.
+summary: در میانه‌ی طبیعت وحشی کره، یک استاد بودایی با صبر و حوصله پسری را بزرگ می‌کند و در عین حال از طریق تجربه و تمرین‌های بی‌پایان، خرد و شفقت را به او می‌آموزد.
 IMDb: '8'
-time: 1h 43m
+time: 1h 42m
 year: '2003'
-Country: کره
+Country: کره جنوبی
 Genres: درام
 Director: Kim Ki-duk
 Writer: ' Kim Ki-duk'
