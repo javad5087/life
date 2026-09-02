@@ -13,8 +13,8 @@ year: '2022'
 Genres: درام، اکشن، جنایی
 Country: آمریکا
 Director: ' Nick Santora'
-Writer: ''
-stars: ' Alan RitchsonMaria StenMalcolm Goodwin'
+Writer: لی چایلد
+stars: ' Alan Ritchson,Maria Sten,Malcolm Goodwin'
 duration: 50
 ---
 
