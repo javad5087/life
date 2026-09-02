@@ -1,0 +1,90 @@
+{{ define "main" }}
+{{ $r := .Site.Data.resume }}
+<link rel="stylesheet" href="/css/resume.css">
+<main class="resume-page" dir="rtl">
+  <section class="resume-hero container">
+    <div class="resume-hero-card">
+      <div class="hero-main">
+        <div class="hero-avatar-wrap"><img src="{{ $r.profile.image }}" alt="{{ $r.profile.name }}" class="hero-avatar"></div>
+        <div class="hero-copy">
+          <span class="eyebrow">PORTFOLIO / RESUME</span>
+          <h1>{{ $r.profile.name }}</h1>
+          <h2>{{ $r.profile.role }}</h2>
+          <p>{{ $r.profile.intro }}</p>
+          <div class="hero-actions">
+            <button type="button" class="resume-btn" onclick="window.print()"><i class="fa fa-print"></i> چاپ رزومه</button>
+            {{ range $r.profile.links }}<a class="resume-btn ghost" href="{{ .url }}" target="_blank" rel="noopener"><i class="fa {{ .icon }}"></i> {{ .title }}</a>{{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span><i class="fa fa-map-marker"></i>{{ $r.profile.location }}</span>
+        <a href="mailto:{{ $r.profile.email }}"><i class="fa fa-envelope"></i>{{ $r.profile.email }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container stats-grid">
+    {{ range $r.stats }}<div class="stat-card"><strong>{{ .value }}</strong><span>{{ .label }}</span></div>{{ end }}
+  </section>
+
+  <section class="container portfolio-grid">
+    <aside class="resume-sidebar">
+      <div class="side-card sticky-side">
+        <div class="side-nav-title">فهرست رزومه</div>
+        <a href="#about">درباره من</a><a href="#publications">تألیفات</a><a href="#articles">مقالات</a><a href="#websites">سایت‌ها</a><a href="#apps">اپلیکیشن‌ها</a><a href="#experience">سوابق</a><a href="#skills">مهارت‌ها</a><a href="#interests">علایق</a>
+      </div>
+      <div class="side-card">
+        <div class="side-label">تمرکز حرفه‌ای</div>
+        <div class="chips"><span>حقوق</span><span>جرم‌شناسی</span><span>وب</span><span>محتوا</span><span>لینوکس</span></div>
+      </div>
+    </aside>
+
+    <div class="resume-content">
+      <section class="resume-section" id="about">
+        <div class="section-head"><span>01</span><div><small>PROFILE</small><h2>درباره من</h2></div></div>
+        <div class="about-card"><p>{{ $r.profile.bio }}</p><p>{{ $r.profile.intro }}</p></div>
+      </section>
+
+      <section class="resume-section" id="publications">
+        <div class="section-head"><span>02</span><div><small>PUBLICATIONS</small><h2>تألیفات</h2></div></div>
+        <div class="publication-list">
+          {{ range $i, $p := $r.publications }}<article class="publication-item"><div class="pub-index">{{ add $i 1 | printf "%02d" }}</div><div class="pub-body"><h3>{{ $p.title }}</h3><div class="pub-meta"><span>{{ $p.year }}</span>{{ with $p.isbn }}<span>ISBN: {{ . }}</span>{{ end }}{{ with $p.format }}<span>{{ . }}</span>{{ end }}</div></div></article>{{ end }}
+        </div>
+      </section>
+
+      <section class="resume-section" id="articles">
+        <div class="section-head"><span>03</span><div><small>ARTICLES</small><h2>مقالات</h2></div></div>
+        <div class="cards-grid">{{ range $r.articles }}<article class="mini-card"><div class="card-icon"><i class="fa fa-file-text-o"></i></div><h3>{{ .title }}</h3><p>{{ .place }}</p><b>{{ .year }}</b></article>{{ end }}</div>
+      </section>
+
+      <section class="resume-section" id="websites">
+        <div class="section-head"><span>04</span><div><small>WEB PROJECTS</small><h2>سایت‌های طراحی‌شده</h2></div></div>
+        <div class="cards-grid">{{ range $r.websites }}<article class="project-card"><div class="project-top"><i class="fa fa-globe"></i><span>WEB</span></div><h3>{{ .title }}</h3><p>{{ .description }}</p><div class="project-footer"><small>{{ .tech }}</small>{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">مشاهده <i class="fa fa-arrow-left"></i></a>{{ end }}</div></article>{{ end }}</div>
+      </section>
+
+      <section class="resume-section" id="apps">
+        <div class="section-head"><span>05</span><div><small>DIGITAL PRODUCTS</small><h2>اپلیکیشن‌ها و برنامه‌ها</h2></div></div>
+        <div class="cards-grid">{{ range $r.apps }}<article class="project-card app-card"><div class="project-top"><i class="fa fa-mobile"></i><span>{{ .tag }}</span></div><h3>{{ .title }}</h3><p>{{ .description }}</p><div class="project-footer">{{ with .url }}<a href="{{ . }}">جزئیات <i class="fa fa-arrow-left"></i></a>{{ end }}</div></article>{{ end }}</div>
+      </section>
+
+      <section class="resume-section" id="experience">
+        <div class="section-head"><span>06</span><div><small>EXPERIENCE</small><h2>تحصیلات و سوابق</h2></div></div>
+        <div class="timeline">{{ range $r.education }}<div class="timeline-item"><span class="dot"></span><div><b>{{ .year }}</b><h3>{{ .title }}</h3><p>{{ .place }}</p></div></div>{{ end }}{{ range $r.employment }}<div class="timeline-item"><span class="dot"></span><div><b>{{ .year }}</b><h3>{{ .title }}</h3></div></div>{{ end }}</div>
+        <div class="timeline large">{{ range $r.timeline }}<div class="timeline-item"><span class="dot"></span><div><b>{{ .year }}</b><h3>{{ .title }}</h3><p>{{ .text }}</p></div></div>{{ end }}</div>
+      </section>
+
+      <section class="resume-section" id="skills">
+        <div class="section-head"><span>07</span><div><small>SKILLS</small><h2>مهارت‌ها</h2></div></div>
+        <div class="skills-columns"><div class="skill-group"><h3>زبان‌های برنامه‌نویسی</h3>{{ range $r.programming }}<div class="skill"><div><span>{{ .name }}</span><b>{{ .level }}%</b></div><div class="bar"><i style="width:{{ .level }}%"></i></div></div>{{ end }}</div><div class="skill-group"><h3>نرم‌افزارها و ابزارها</h3>{{ range $r.software }}<div class="skill"><div><span>{{ .name }}</span><b>{{ .level }}%</b></div><div class="bar"><i style="width:{{ .level }}%"></i></div></div>{{ end }}</div><div class="skill-group"><h3>زبان‌ها</h3>{{ range $r.languages }}<div class="skill"><div><span>{{ .name }}</span><b>{{ .level }}%</b></div><div class="bar"><i style="width:{{ .level }}%"></i></div></div>{{ end }}</div></div>
+      </section>
+
+      <section class="resume-section" id="interests">
+        <div class="section-head"><span>08</span><div><small>LIFESTYLE</small><h2>عادت‌ها و علاقه‌مندی‌ها</h2></div></div>
+        <div class="interest-grid">{{ range $r.interests }}<div class="interest-card"><i class="fa {{ .icon }}"></i><span>{{ .title }}</span></div>{{ end }}</div>
+        <div class="habit-grid">{{ range $r.habits }}<article><i class="fa fa-check-circle"></i><div><h3>{{ .title }}</h3><p>{{ .description }}</p></div></article>{{ end }}</div>
+      </section>
+    </div>
+  </section>
+</main>
+{{ end }}
