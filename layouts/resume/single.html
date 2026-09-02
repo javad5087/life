@@ -1,0 +1,72 @@
+{{ define "main" }}
+<main class="main-content bg-gray resume-page" dir="rtl">
+  <section class="section p-0">
+    <div class="container py-6">
+      {{ $r := .Site.Data.resume }}
+
+      <div class="resume-hero card hover-shadow-7 mb-5">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center">
+            {{ with $r.profile.image }}<img class="avatar avatar-xxl rounded-circle resume-avatar" src="{{ . }}" alt="{{ $r.profile.name }}">{{ end }}
+          </div>
+          <div class="col-md-9 text-right">
+            <h1 class="font-weight-700 mb-2">{{ $r.profile.name }}</h1>
+            <h5 class="text-muted mb-3">{{ $r.profile.title }}</h5>
+            <p class="lead mb-4">{{ $r.profile.bio }}</p>
+            <div class="resume-links">
+              {{ with $r.profile.website }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fa fa-globe"></i> وب‌سایت</a>{{ end }}
+              {{ with $r.profile.github }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fa fa-github"></i> GitHub</a>{{ end }}
+              {{ with $r.profile.email }}<a href="mailto:{{ . }}"><i class="fa fa-envelope"></i> ایمیل</a>{{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ with $r.publications }}
+      <section class="resume-section card mb-4">
+        <h3 class="resume-title"><i class="fa fa-book"></i> تألیفات</h3>
+        <div class="resume-list">
+          {{ range . }}
+          <div class="resume-item">
+            <div><strong>{{ .title }}</strong></div>
+            <span class="resume-year">سال انتشار: {{ .year }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      {{ with $r.articles }}
+      <section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-file-text-o"></i> مقالات</h3>
+        <div class="resume-grid">{{ range . }}<div class="resume-box"><strong>{{ .title }}</strong>{{ with .year }}<small>سال: {{ . }}</small>{{ end }}</div>{{ end }}</div>
+      </section>
+      {{ end }}
+
+      {{ with $r.websites }}
+      <section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-globe"></i> سایت‌های طراحی‌شده</h3>
+        <div class="resume-grid">{{ range . }}<div class="resume-box"><strong>{{ .name }}</strong>{{ with .description }}<p>{{ . }}</p>{{ end }}{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">مشاهده سایت</a>{{ end }}</div>{{ end }}</div>
+      </section>
+      {{ end }}
+
+      {{ with $r.projects }}
+      <section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-code"></i> پروژه‌ها</h3>
+        <div class="resume-grid">{{ range . }}<div class="resume-box"><strong>{{ .name }}</strong>{{ with .description }}<p>{{ . }}</p>{{ end }}</div>{{ end }}</div>
+      </section>
+      {{ end }}
+
+      <div class="row">
+        {{ with $r.languages }}<div class="col-md-6"><section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-language"></i> زبان‌ها</h3>{{ range . }}<div class="skill-row"><div><span>{{ .name }}</span><span>{{ .level }}٪</span></div><div class="resume-progress"><span style="width:{{ .level }}%"></span></div></div>{{ end }}</section></div>{{ end }}
+        {{ with $r.programming }}<div class="col-md-6"><section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-terminal"></i> زبان‌های برنامه‌نویسی</h3><div class="resume-tags">{{ range . }}<span>{{ .name }}</span>{{ end }}</div></section></div>{{ end }}
+      </div>
+
+      <div class="row">
+        {{ with $r.software }}<div class="col-md-6"><section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-cogs"></i> نرم‌افزارها و ابزارها</h3><div class="resume-tags">{{ range . }}<span>{{ .name }}</span>{{ end }}</div></section></div>{{ end }}
+        {{ with $r.interests }}<div class="col-md-6"><section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-heart-o"></i> علاقه‌مندی‌ها</h3><div class="resume-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div></section></div>{{ end }}
+      </div>
+
+      {{ with $r.habits }}<section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-check-square-o"></i> عادت‌ها و فعالیت‌ها</h3><div class="resume-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div></section>{{ end }}
+      {{ with $r.skills }}<section class="resume-section card mb-4"><h3 class="resume-title"><i class="fa fa-star-o"></i> مهارت‌ها</h3><div class="resume-tags">{{ range . }}<span>{{ . }}</span>{{ end }}</div></section>{{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}
