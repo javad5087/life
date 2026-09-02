@@ -55,15 +55,19 @@ identifier = "law"
 url = "/music/"
 weight = 4
 [[menu.main]]
-[[menu.main]]
 name = "اپ‌ها"
 identifier = "apps"
 url = "/apps/"
 weight = 5
 [[menu.main]]
+name = "درباره"
+identifier = "resume"
+url = "/resume/"
+weight = 6
+[[menu.main]]
 name = "تماس"
 identifier = "form"
 url = "/form/"
-weight = 6
+weight = 7
 
 
