@@ -12,7 +12,7 @@ readingTime: '40'
 readingProgress: '0'
 author: دکتر مهدی کی‌نیا
 translator: ندارد
-pages: '100'
+pages: '728'
 publisher: دانشگاه تهران
 year: ١٣٥٧
 start: 1405/06/12
