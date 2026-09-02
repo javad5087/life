@@ -87,11 +87,7 @@
     </div>
   </section>
 
-  <section class="container resume-section">
-    <div class="resume-heading"><span>09</span><div><h2>مقالات و نوشته‌ها</h2><p>این بخش برای فهرست دقیق مقالات قابل توسعه است.</p></div></div>
-    {{ range .Site.Data.resume.articles }}<div class="article-note"><i class="fa fa-pencil"></i><div><strong>{{ .title }}</strong><p>{{ .note }}</p>{{ with .url }}<a href="{{ . }}">مشاهده مقاله</a>{{ end }}</div></div>{{ end }}
-  </section>
+ 
 
-  <section class="resume-footer-cta"><div class="container"><h2>یک ایده، یک پروژه، یک روایت</h2><p>این Portfolio همراه با پروژه‌های جدید به‌روزرسانی می‌شود.</p><a href="/contact">تماس با من <i class="fa fa-angle-left"></i></a></div></section>
 </main>
 {{ end }}
