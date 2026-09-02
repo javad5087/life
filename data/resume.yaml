@@ -1,36 +1,100 @@
-# اطلاعات رزومه شخصی
 profile:
-  name: "نام و نام خانوادگی"
-  title: "عنوان حرفه‌ای"
-  bio: "معرفی کوتاه خود را اینجا بنویسید."
-  image: "/img/bg/q.jpg"
-  email: ""
-  github: "https://github.com/javad5087"
-  website: "https://javadsajjadi.ir"
+  name: "سید جواد سجادی"
+  title: "حقوق | نویسندگی | توسعه وب و اپلیکیشن"
+  intro: "فارغ‌التحصیل حقوق و علاقه‌مند به کتاب، نوشتن، فناوری و ساخت ابزارهای کاربردی. این صفحه مجموعه‌ای از آثار، پروژه‌ها و مهارت‌های من است."
+  website: "https://javadsajjadi.ir/"
 
-# فقط کتاب‌هایی که خودتان تألیف/ترجمه کرده‌اید را اینجا وارد کنید.
-# عنوان و سال انتشار نمایش داده می‌شود.
-publications:
-  - title: "نام کتاب اول"
-    year: "۱۴۰۲"
-  - title: "نام کتاب دوم"
-    year: "۱۴۰۳"
+stats:
+  - label: "تألیفات"
+    value: "2"
+    icon: "fa-book"
+  - label: "اپلیکیشن‌ها"
+    value: "6"
+    icon: "fa-mobile"
+  - label: "دسته‌های محتوایی"
+    value: "7"
+    icon: "fa-folder-open"
+  - label: "سال فعالیت سایت"
+    value: "2026"
+    icon: "fa-globe"
 
-articles: []
-websites: []
-projects: []
+authored_books:
+  - title: "فیر کاری HTML 5"
+    year: "1401"
+    note: "انتشارات سها"
+    url: "https://mahdroo.ir/shop/product/book-1233165-c9210i"
+  - title: "فیر کاری CSS3"
+    year: "1401"
+    note: "انتشارات سها"
+    url: "https://mahdroo.ir/shop/product/book-179098-3znfqq"
+
+articles:
+  - title: "یادداشت‌ها و نوشته‌های حقوقی و اجتماعی"
+    note: "نمونه‌ای از نوشته‌های منتشرشده با نام سید جواد سجادی؛ پیش از انتشار نهایی در رزومه، لینک‌ها را تکمیل کنید."
+    url: ""
+
+websites:
+  - title: "تارنمای شخصی سید جواد سجادی"
+    description: "وب‌سایت شخصی مبتنی بر Hugo برای مدیریت کتاب‌ها، فیلم‌ها، صدا، اپلیکیشن‌ها و محتوای شخصی."
+    tech: "Hugo · HTML · CSS · JavaScript"
+    url: "https://javadsajjadi.ir/"
+  - title: "پروژه Life"
+    description: "سامانه شخصی برای ثبت و نمایش کتاب‌ها، فیلم‌ها، موسیقی، اپ‌ها و یادداشت‌ها."
+    tech: "Hugo · Bootstrap · JavaScript"
+    url: "https://github.com/javad5087/life"
+
+skills:
+  - name: "Hugo"
+    level: 90
+  - name: "HTML / CSS"
+    level: 90
+  - name: "JavaScript"
+    level: 75
+  - name: "Bootstrap"
+    level: 85
+  - name: "طراحی رابط کاربری وب"
+    level: 80
+  - name: "توسعه اپلیکیشن اندروید"
+    level: 75
+  - name: "Git / GitHub"
+    level: 80
 
 languages:
   - name: "فارسی"
-    level: 100
+    level: "مسلط"
+    value: 100
   - name: "کردی"
-    level: 90
+    level: "مسلط"
+    value: 95
   - name: "انگلیسی"
-    level: 60
+    level: "مطالعه و فنی"
+    value: 65
 
-programming: []
-software: []
-interests: []
-habits: []
-skills: []
-experience: []
+software:
+  - "Git / GitHub"
+  - "Hugo"
+  - "VS Code"
+  - "Adobe InDesign"
+  - "Adobe Photoshop"
+  - "Xcode"
+  - "Android Studio"
+
+interests:
+  - "کتاب و مطالعه"
+  - "حقوق و جرم‌شناسی"
+  - "نویسندگی"
+  - "فناوری و هوش مصنوعی"
+  - "طراحی وب"
+  - "توسعه اپلیکیشن"
+  - "فیلم و موسیقی"
+
+habits:
+  - title: "مطالعه روزانه"
+    text: "ثبت و پیگیری روند مطالعه کتاب‌ها در وب‌سایت شخصی."
+    icon: "fa-book"
+  - title: "یادگیری و ساختن"
+    text: "یادگیری فناوری‌های جدید و تبدیل ایده‌ها به ابزارهای کاربردی."
+    icon: "fa-code"
+  - title: "ثبت و مستندسازی"
+    text: "ثبت کتاب‌ها، فیلم‌ها، موسیقی و پروژه‌ها برای دسترسی و مرور دوباره."
+    icon: "fa-archive"
