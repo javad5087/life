@@ -3,7 +3,7 @@ title: "پروفسور و مرد دیوانه"
 entitle: "The Professor and the Madman"
 date: 2026-02-15T00:47:55+03:30
 draft: false
-categories: ["movies"]
+categories: فیلم
 cover: "/images/movie/The-Professor-and-the-Madman.jpg"
 summary: "پروفسور جیمز موری در قرن نوزدهم شروع به گردآوری کلمات برای اولین ویرایش فرهنگ لغت انگلیسی آکسفورد می‌کند و بیش از 10،000 مدخل از یک بیمار در تیمارستان جنایی برادمور،دریافت می‌کند.
 "
