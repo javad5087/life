@@ -3,7 +3,7 @@ title: "رستگاری در شائوشنگ"
 entitle: "The Shawshank Redemption"
 date: 2026-02-15T01:28:59+03:30
 draft: false
-categories: ["movies"]
+categories: فیلم
 cover: "/images/movie/Shawshank.jpg"
 summary: "یک بانکدار که به جرم قتل همسرش محکوم شده، طی یک ربع قرن با یک زندانی سرسخت دوست می‌شود، در حالی که بی‌گناهی خود را حفظ می‌کند و تلاش می‌کند از زندان فرار کند."
 IMDb : 9.3
