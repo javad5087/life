@@ -3,7 +3,7 @@ title: "دزدان دوچرخه"
 entitle: "Hunting"
 date: 2026-02-16T15:24:00+03:30
 draft: false
-categories: ["movies"]
+categories: فیلم
 cover: "/images/movie/Bicycle-Thieves.jpg"
 summary: "در ایتالیای پس از جنگ جهانی دوم، دوچرخه‌ی یک مرد کارگر به سرقت می‌رود؛ دزدیدن دوچرخه باعث می‌شود تلاش‌های او برای یافتن کار را به خطر بندازد. او و پسرش به دنبال پیدا کردن آن می‌روند."
 IMDb : 8.2
