@@ -5,7 +5,7 @@ entitle: "Two prosecutors"
 draft: false
 Genres: درام
 categories:
-  - movies
+  - فیلم
 IMDb: 7.1
 time: "1h 43m"
 cover: "/images/movie/1785332393495-two-prosecutors.jpg"
