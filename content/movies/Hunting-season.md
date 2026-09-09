@@ -3,7 +3,7 @@ title: "فصل شکار"
 entitle: "Hunting Season"
 date: 2026-02-10T01:03:04+03:30
 draft: false
-categories: ["movies"]
+categories: فیلم
 cover: "/images/movie/HuntingSeason.jpg"
 summary: "وقتی یک بازمانده گوشه‌گیر و دخترش، زنی مرموز و زخمی را از رودخانه نجات می‌دهند، درگیر شبکه‌ای مرگبار از خشونت و انتقام می‌شوند و مجبور می‌شوند برای زنده ماندن با یک جنایتکار بی‌رحم مقابله کنند."
 IMDb : "5.7 "
