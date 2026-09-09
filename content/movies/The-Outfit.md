@@ -3,7 +3,7 @@ title: "خیاط"
 entitle: "The Outfit"
 date: 2026-02-15T01:14:43+03:30
 draft: false
-categories: ["movies"]
+categories: فیلم
 cover: "/images/movie/TheOutfit.jpg"
 summary: "یک خیاط متخصص باید از یک گروه خطرناک از گانگسترها پیشی بگیرد تا از یک شب سرنوشت ساز جان سالم به در ببرد.
 "
